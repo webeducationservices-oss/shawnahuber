@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | The Mental Mechanics | Inspiration for Change</title>
   <meta name="description" content="Inspiration for change from The Mental Mechanics. Tips, insights, and strategies for high-performance living.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,10 +29,67 @@
     ]
   }
   </script>
+  <style>
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+    .blog-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .blog-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: var(--gray-100, #f5f5f5);
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .blog-card:hover .blog-card-img img {
+      transform: scale(1.05);
+    }
+    .blog-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+      color: var(--green-deep, #1a3a2a);
+    }
+    .blog-card-meta {
+      font-size: 0.8rem;
+      color: var(--gray-500, #888);
+      margin-bottom: 0.75rem;
+    }
+    .blog-card-body p {
+      font-size: 0.9rem;
+      color: var(--gray-600, #666);
+      flex: 1;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -42,10 +100,10 @@
           <a href="programs.html" class="dropdown-trigger">Programs <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px"></i></a>
           <div class="dropdown-menu">
             <a href="programs.html">How It Works</a>
-            <a href="programs.html#business">Business Owner Mindset Mastery</a>
-            <a href="programs.html#equestrian">Equestrian Mindset Mastery</a>
-            <a href="programs.html#baseball">Baseball Mindset Mastery</a>
-            <a href="programs.html#soccer">Soccer Mindset Mastery</a>
+            <a href="business-owner.html">Business Owner Mindset Mastery</a>
+            <a href="equestrian.html">Equestrian Mindset Mastery</a>
+            <a href="baseball.html">Baseball Mindset Mastery</a>
+            <a href="soccer.html">Soccer Mindset Mastery</a>
             <a href="speaking.html">Speaking</a>
           </div>
         </div>
@@ -72,19 +130,441 @@
     </div>
   </section>
 
-  <!-- Blog Content -->
+  <!-- Blog Listing -->
   <section class="section">
     <div class="container">
-      <div class="blog-placeholder fade-up">
-        <div style="margin-bottom:2rem">
-          <i class="fas fa-pen-nib" style="font-size:3rem;color:var(--green-pale)"></i>
-        </div>
-        <h3>Blog Posts Coming Soon</h3>
-        <p style="max-width:500px;margin:1rem auto 2rem">We're working on bringing you the best mindset and performance content. In the meantime, join our community for daily inspiration.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-          <a href="https://www.facebook.com/groups/227824444972533" target="_blank" class="btn btn-primary">Join the Facebook Group</a>
-          <a href="programs.html" class="btn btn-secondary">Explore Programs</a>
-        </div>
+      <div class="blog-grid">
+    <a href="blog/live-in-alignment-with-your-values-free-training.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://lh3.googleusercontent.com/d/1wHAXVKCtzdqJbairrH-b2NqFuAGsqO_B=s3000" alt="Live in Alignment With Your Values: Free Training" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Live in Alignment With Your Values: Free Training</h3>
+        <div class="blog-card-meta">THE MENTAL MECHANICS &middot; March 31, 2026</div>
+        <p>Discover your core values and learn how to live a life of purpose and meaning. Join our free training!</p>
+      </div>
+    </a>
+    <a href="blog/ics.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Untitled+design+%281%29.jpg" alt="Mindset Mastery for High-Performing Teens: From Burnout to Breakthrough" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Mindset Mastery for High-Performing Teens: From Burnout to Breakthrough</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 09, 2025</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/real-success-vs-material-achievements-mental-mechanics.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Untitled+design+%281%29.jpg" alt="Real Success vs. Material Achievements  | Mental Mechanics" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Real Success vs. Material Achievements  | Mental Mechanics</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; June 06, 2025</div>
+        <p>Discover why true success beats material gain. Learn to build lasting happiness through relationships, purpose, and growth with The Mental Mechanics.</p>
+      </div>
+    </a>
+    <a href="blog/embracing-the-unpredictable-navigating-life-when-your-schedule-takes-a-detour.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Dark+Believe+in+Yourself+Quote+Poster.jpg" alt="Embracing the Unpredictable: Navigating Life When Your Schedule Takes a Detour" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Embracing the Unpredictable: Navigating Life When Your Schedule Takes a Detour</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; November 29, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/my-post.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+White+Barbel+For+Men+Themes+Instagram+Post+%281%29.jpg" alt="The Hard Truth About Hard Work: Why It Can Lead to Losing More Than You Gain" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>The Hard Truth About Hard Work: Why It Can Lead to Losing More Than You Gain</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 25, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/unleashing-quantum-potential-and-positive-energy-for-business-success.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Ways+To+Reduce+Holiday+Stress.jpg" alt="Unleashing Quantum Potential and Positive Energy for Business Success" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Unleashing Quantum Potential and Positive Energy for Business Success</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 11, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/equestrian-potential-a-holistic-approach-to-goal-setting.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/md/pexels/dms3rep/multi/pexels-photo-18328918.jpeg" alt="Equestrian Potential: A Holistic Approach to Goal Setting" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Equestrian Potential: A Holistic Approach to Goal Setting</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; September 22, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/business-tips-from-the-trenches-expert-advice-to-start-your-small-business-or-side-hustle.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/41bUBODdt-L._SX322_BO1-204-203-200_.jpg" alt="Business Tips From The Trenches: Expert Advice to Start Your Small Business or Side Hustle" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Business Tips From The Trenches: Expert Advice to Start Your Small Business or Side Hustle</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 25, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/overcoming-riding-competition-anxiety-how-hypnosis-sessions-can-transform-your-equestrian-performance.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Untitled+design+%2883%29.jpg" alt="Overcoming Riding &amp; Competition Anxiety: How Hypnosis Sessions Can Transform Your Equestrian Performance" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Overcoming Riding &amp; Competition Anxiety: How Hypnosis Sessions Can Transform Your Equestrian Performance</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; June 23, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/copy-of-where-are-you-in-this-journey.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Where-are-you-in-this-journey.jpg" alt="The Lonely Road Traveled By So Many" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>The Lonely Road Traveled By So Many</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; May 08, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/saying-no-to-oneself-in-life-and-business.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Beige+Minimalist+Stress+Instagram+Post.jpg" alt="Saying No To Oneself In Life And Business" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Saying No To Oneself In Life And Business</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; April 18, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/no-time.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Blue+Minimalist+Clown+E-Sports+Logo.jpg" alt="No Time" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>No Time</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; April 13, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/executive-high-performance-coaching-and-hypnosis.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Copy+of+5.jpg" alt="Executive High Performance Coaching and Hypnosis" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Executive High Performance Coaching and Hypnosis</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; March 28, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/copy-of-tips-for-helping-lessen-anxiety.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Copy+of+5.jpg" alt="Motivation For Monday" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Motivation For Monday</h3>
+        <div class="blog-card-meta">Rebeca Ruizva &middot; March 06, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/tips-for-helping-lessen-anxiety.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Copy+of+5.jpg" alt="Tips For Helping Lessen Anxiety" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Tips For Helping Lessen Anxiety</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; March 01, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/where-are-you-in-this-journey.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Where+are+you+in+this+journey.jpg" alt="Where Are You In This Journey" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Where Are You In This Journey</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; February 22, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/personal-success-promoting-business-success.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Break+your+limit-631876ef.jpg" alt="Personal Success Promoting Business Success" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Personal Success Promoting Business Success</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; February 13, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/real-change-a-journey-of-self-assessment-and-support.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/DALL-E+2023-02-03+14.03.24+-+Can+you+create+an+image+in+the+style+of+sketch+and+watercolors.+Use+the+colors+of+greens+and+grays.+The+image+can+be+a+business+man+walking+through+t.png" alt="Real Change: A Journey of Self-Assessment and Support" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Real Change: A Journey of Self-Assessment and Support</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; February 03, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/why-you-should-not-take-shortcuts.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Why+You+Should+Not+Take+Shortcuts.jpg" alt="Why You Should Not Take Shortcuts" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Why You Should Not Take Shortcuts</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; January 23, 2023</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/why-detox-your-mind-and-your-body-at-the-same-time.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Detox+Menu+.jpg" alt="Why Detox Your Mind And Your Body At The Same Time" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Why Detox Your Mind And Your Body At The Same Time</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; December 28, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/what-is-the-point-of-celebrating-birthdays.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Pink+Modern+Happy+Birthday.jpg" alt="What Is The Point Of Celebrating Birthdays" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>What Is The Point Of Celebrating Birthdays</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; December 05, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/copy-of-what-is-considered-a-close-friendship.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Ways+To+Reduce+Holiday+Stress.jpg" alt="Ways To Reduce Holiday Stress" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Ways To Reduce Holiday Stress</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; December 02, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/what-is-considered-a-close-friendship.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Minimalist+colorful+instagram+post+to+international+day+of+friendship.jpg" alt="What Is Considered A Close Friendship" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>What Is Considered A Close Friendship</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; November 30, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/feeling-excited-frustrated-disappointed-out-of-balancetake-control-before-the-new-year-with-this.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Feeling+Excited-+Frustrated-+Disappointed-+Out+Of+Balance-Take+Control+Before+The+New+Year+With+This+Mobile.jpg" alt="Feeling Excited, Frustrated, Disappointed, Out Of Balance—Take Control Before The New Year With This" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Feeling Excited, Frustrated, Disappointed, Out Of Balance—Take Control Before The New Year With This</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; November 11, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-consistency-leads-to-success.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/How+Consistency+Leads+To+Success.jpg" alt="How Consistency Leads To Success" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How Consistency Leads To Success</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 26, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/what-does-a-gratitude-list-look-like.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Gratitude+List+Thumbnail.png" alt="What Does A Gratitude List Look Like?" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>What Does A Gratitude List Look Like?</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 14, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/why-is-taking-action-important.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/taking+action.jpg" alt="Why Is Taking Action Important" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Why Is Taking Action Important</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 12, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/the-conscious-and-sub-conscious-mind-working-together-better.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/The+Conscious+and+Sub+Conscious+Mind+Working+Together+Better..jpg" alt="The Conscious and Sub Conscious Mind Working Together Better." loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>The Conscious and Sub Conscious Mind Working Together Better.</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; October 05, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-do-you-know-if-you-are-valuable.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Copy+of+5+%281%29.jpg" alt="How Do You Know If You Are Valuable" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How Do You Know If You Are Valuable</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; September 20, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/why-quality-sleep-is-important.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Why+Quality+Sleep+Is+Important.jpg" alt="Why Quality Sleep Is Important" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Why Quality Sleep Is Important</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; September 12, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/business-owner-or-job-creator.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+How+Working+In+Groups+Is+Exceptionally+Beneficial+%281%29.jpg" alt="Business Owner Or Job Creator?" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Business Owner Or Job Creator?</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; September 05, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-to-be-a-better-person-and-be-happy.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/How-To-Be-A-Better-Person-And-Be-Happy.jpg" alt="How To Be A Better Person And Be Happy" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How To Be A Better Person And Be Happy</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 30, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/working-on-yourself-to-grow-a-better-life-and-business.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy-of-Copy-of-Copy-of-How-to-Deal-with-Business-Owner-Burnout--281-29.jpg" alt="Working On Yourself To Grow A Better Life And Business" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Working On Yourself To Grow A Better Life And Business</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 23, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-working-in-groups-is-exceptionally-beneficial.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/How+Working+In+Groups+Is+Exceptionally+Beneficial.jpg" alt="How Working In Groups Is Exceptionally Beneficial" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How Working In Groups Is Exceptionally Beneficial</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 12, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-to-attract-happiness-and-wealth.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/How+To+Attract+Happiness+And+Wealth.jpg" alt="How To Attract Happiness And Wealth" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How To Attract Happiness And Wealth</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 10, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/where-did-my-passion-go-in-my-life-and-business.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Where+Did+My+Passion+Go+In+My+Life+And+Business.jpg" alt="Where Did My Passion Go In My Life And Business" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Where Did My Passion Go In My Life And Business</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 05, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/why-working-in-groups-is-better.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Why+Working+in+Groups+Is+Better.jpg" alt="Why Working In Groups Is Better" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Why Working In Groups Is Better</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; August 03, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/introverted-business-leaders-getting-it-done.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Image+-+Does+Money+Really+Affect+Motivation+%281%29.jpg" alt="Introverted Business Leaders Getting It Done." loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Introverted Business Leaders Getting It Done.</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; July 27, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/where-is-motivation-in-the-brain.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Where+is+the+motivation+in+the+brain.jpg" alt="Where Is Motivation In The Brain" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Where Is Motivation In The Brain</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; July 22, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/when-high-performers-struggle.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Why+Mindset+Matters+For+Your+Success+%281%29.jpg" alt="When High Performers Struggle." loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>When High Performers Struggle.</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; July 19, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-to-build-a-successful-small-personal-business-training-system.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Blue+Modern+We-re+Hiring+Facebook+Post.jpg" alt="How To Build A Successful  Small Personal Business Training System." loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How To Build A Successful  Small Personal Business Training System.</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; July 12, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/how-does-anxiety-affect-productivity.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+Copy+of+Copy+of+How+to+Deal+with+Business+Owner+Burnout.jpg" alt="How Does Anxiety Affect Productivity?" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>How Does Anxiety Affect Productivity?</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; July 05, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+    <a href="blog/creating-positive-mental-acceleration.html" class="blog-card fade-up">
+      <div class="blog-card-img">
+        <img src="https://irp.cdn-website.com/d8ca2c12/dms3rep/multi/Copy+of+VIDEO+TEMPLATE.jpg" alt="Creating Positive Mental Acceleration" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <h3>Creating Positive Mental Acceleration</h3>
+        <div class="blog-card-meta">Shawn Huber &middot; June 29, 2022</div>
+        <p>Read more...</p>
+      </div>
+    </a>
+
       </div>
     </div>
   </section>
@@ -100,7 +580,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -128,10 +607,10 @@
         <div>
           <h5>Programs</h5>
           <div class="footer-links">
-            <a href="programs.html">Business Owner Course</a>
-            <a href="programs.html">Equestrian Course</a>
-            <a href="programs.html">Baseball System</a>
-            <a href="programs.html">Soccer System</a>
+            <a href="business-owner.html">Business Owner Course</a>
+            <a href="equestrian.html">Equestrian Course</a>
+            <a href="baseball.html">Baseball System</a>
+            <a href="soccer.html">Soccer System</a>
             <a href="products.html">Recommended Products</a>
           </div>
         </div>
@@ -148,7 +627,7 @@
       <div class="footer-bottom">
         <span>&copy; 2025 The Mental Mechanics. All Rights Reserved.</span>
         <span>Mind, Body, and Business</span>
-        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> · <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
+        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> &middot; <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
       </div>
     </div>
   </footer>
