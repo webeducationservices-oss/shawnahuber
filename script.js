@@ -81,22 +81,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Form submission
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', (e) => {
+  // Form submission via form-notify
+  document.querySelectorAll('form[data-ajax]').forEach(form => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const origText = btn.textContent;
-      btn.textContent = 'Sending...';
+
+      // Honeypot check
+      if (form.querySelector('[name="_honey"]')?.value) return;
+
+      const btn = form.querySelector('[type="submit"]');
+      const originalText = btn.textContent;
       btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Thank You!';
-        setTimeout(() => {
-          btn.textContent = origText;
-          btn.disabled = false;
-          form.reset();
-        }, 2000);
-      }, 1000);
+      btn.textContent = 'Sending...';
+
+      try {
+        // Get reCAPTCHA v3 token
+        if (typeof grecaptcha !== 'undefined') {
+          try {
+            const token = await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'form_submit' });
+            const tokenField = form.querySelector('[name="recaptcha_token"]');
+            if (tokenField) tokenField.value = token;
+          } catch (err) {
+            console.warn('reCAPTCHA error:', err);
+          }
+        }
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        await fetch('https://myaieditor.com/api/form-notify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (err) {
+        console.error('Form submit error:', err);
+      }
+
+      // Show thank you
+      const fields = form.querySelector('.form-fields');
+      const success = form.querySelector('.form-success');
+      if (fields) fields.style.display = 'none';
+      if (success) success.classList.add('show');
     });
   });
 });

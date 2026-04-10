@@ -10,6 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://shawnahuber.com/programs">
+  <meta property="og:title" content="Programs | How High Performance Coaching Works">
+  <meta property="og:description" content="Discover The Mental Mechanics coaching process. From mindset awareness to accountability and results. Start with the free 5-Day Challenge.">
+  <meta property="og:image" content="https://shawnahuber.com/images/Mental Mechanics Logo with tagline Green-1920w.png">
+  <meta property="og:url" content="https://shawnahuber.com/programs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Mental Mechanics">
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://shawnahuber.com"},
+      {"@type":"ListItem","position":2,"name":"Programs","item":"https://shawnahuber.com/programs"}
+    ]
+  }
+  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -43,6 +62,7 @@
     </div>
   </nav>
 
+  <main>
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
@@ -121,7 +141,7 @@
           <a href="#" class="btn btn-white btn-lg" style="margin-top:0.5rem">Start Your Challenge</a>
         </div>
         <div class="feature-img">
-          <img src="images/Mental-Mechanic-1920w.png" alt="5-Day Mindset Awareness Challenge" style="object-fit:contain;background:rgba(255,255,255,0.1);border-radius:var(--radius-lg)">
+          <img src="images/Mental-Mechanic-1920w.png" alt="5-Day Mindset Awareness Challenge" loading="lazy" style="object-fit:contain;background:rgba(255,255,255,0.1);border-radius:var(--radius-lg)">
         </div>
       </div>
     </div>
@@ -201,7 +221,7 @@
           </div>
         </div>
         <div class="feature-img">
-          <img src="images/Black and white photo of Shawn Huber-1920w.png" alt="Shawn Huber">
+          <img src="images/Black and white photo of Shawn Huber-1920w.png" alt="Shawn Huber" loading="lazy">
         </div>
       </div>
     </div>
@@ -215,55 +235,71 @@
         <h2>Work With Shawn</h2>
       </div>
       <div class="form-card mx-auto fade-up">
-        <form>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Your name">
+        <form action="https://myaieditor.com/api/form-notify" method="POST" data-ajax>
+          <div class="form-fields">
+            <input type="hidden" name="site_slug" value="shawnahuber">
+            <input type="hidden" name="form_type" value="consultation">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="recaptcha_token" id="recaptcha_token_programs">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="first_name" class="form-control" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Your email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone">
+              </div>
+              <div class="form-group">
+                <label for="time">Best Time to Call</label>
+                <select id="time" name="preferred_time" class="form-control">
+                  <option value="">Select a time</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Your email">
+              <label>I Need Help With</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Clarity"> Clarity</label>
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Energy"> Energy</label>
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Courage"> Courage</label>
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Productivity"> Productivity</label>
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Influence"> Influence</label>
+                <label class="checkbox-label"><input type="checkbox" name="help_with" value="Psychology"> Psychology</label>
+              </div>
             </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:0.5rem">Schedule a Call</button>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" class="form-control" placeholder="Your phone">
+          <div class="form-success">
+            <div class="success-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <div class="form-group">
-              <label for="time">Best Time to Call</label>
-              <select id="time" class="form-control">
-                <option value="">Select a time</option>
-                <option>Morning</option>
-                <option>Afternoon</option>
-                <option>Evening</option>
-              </select>
-            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll be in touch within 24 hours.</p>
+            <a href="tel:+19198243530" class="btn btn-primary" style="margin-top:1rem">Call Now: (919) 824-3530</a>
           </div>
-          <div class="form-group">
-            <label>I Need Help With</label>
-            <div class="checkbox-group">
-              <label class="checkbox-label"><input type="checkbox"> Clarity</label>
-              <label class="checkbox-label"><input type="checkbox"> Energy</label>
-              <label class="checkbox-label"><input type="checkbox"> Courage</label>
-              <label class="checkbox-label"><input type="checkbox"> Productivity</label>
-              <label class="checkbox-label"><input type="checkbox"> Influence</label>
-              <label class="checkbox-label"><input type="checkbox"> Psychology</label>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:0.5rem">Schedule a Call</button>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/Mental Mechanics Logo Horizontal-1920w.png" alt="The Mental Mechanics">
+          <img src="images/Mental Mechanics Logo Horizontal-1920w.png" alt="The Mental Mechanics" loading="lazy">
           <p>High-performance mindset coaching for entrepreneurs, athletes, and leaders. Live happier and healthier.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/groups/227824444972533" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -306,11 +342,11 @@
       <div class="footer-bottom">
         <span>&copy; 2025 The Mental Mechanics. All Rights Reserved.</span>
         <span>Mind, Body, and Business</span>
+        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> &middot; <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
       </div>
     </div>
   </footer>
 
   <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
-  <script src="script.js"></script>
 </body>
 </html>

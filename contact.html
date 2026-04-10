@@ -10,6 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://shawnahuber.com/contact">
+  <meta property="og:title" content="Contact The Mental Mechanics">
+  <meta property="og:description" content="Schedule a call with Shawn Huber. High-performance mindset coaching in Palm Harbor, FL. Call (919) 824-3530.">
+  <meta property="og:image" content="https://shawnahuber.com/images/Mental Mechanics Logo with tagline Green-1920w.png">
+  <meta property="og:url" content="https://shawnahuber.com/contact">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Mental Mechanics">
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shawnahuber.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://shawnahuber.com/contact" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -42,6 +61,8 @@
       </div>
     </div>
   </nav>
+
+  <main>
 
   <!-- Page Hero -->
   <section class="page-hero">
@@ -106,36 +127,50 @@
 
         <div class="form-card">
           <h3 style="margin-bottom:1.5rem">Get in Touch</h3>
-          <form>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" class="form-control" placeholder="First name">
+          <form action="https://myaieditor.com/api/form-notify" method="POST" data-ajax>
+            <div class="form-fields">
+              <input type="hidden" name="site_slug" value="shawnahuber">
+              <input type="hidden" name="form_type" value="contact">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="first_name" class="form-control" placeholder="First name" required>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="last_name" class="form-control" placeholder="Last name" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone">
+                </div>
               </div>
               <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" class="form-control" placeholder="Last name">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Your email">
+                <label for="service">Service / Product</label>
+                <input type="text" id="service" name="service_type" class="form-control" placeholder="What are you interested in?">
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" placeholder="Your phone">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="message" class="form-control" placeholder="Tell us about your goals and how we can help"></textarea>
               </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Get in Touch</button>
             </div>
-            <div class="form-group">
-              <label for="service">Service / Product</label>
-              <input type="text" id="service" class="form-control" placeholder="What are you interested in?">
+            <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+            <div class="form-success">
+              <div class="success-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>Message Sent!</h3>
+              <p>Thank you for reaching out. We'll be in touch shortly.</p>
+              <a href="tel:+19198243530" class="btn btn-primary" style="margin-top:1rem">Call (919) 824-3530</a>
             </div>
-            <div class="form-group">
-              <label for="comments">Comments</label>
-              <textarea id="comments" class="form-control" placeholder="Tell us about your goals and how we can help"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Get in Touch</button>
           </form>
         </div>
       </div>
@@ -153,6 +188,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -202,11 +239,11 @@
       <div class="footer-bottom">
         <span>&copy; 2025 The Mental Mechanics. All Rights Reserved.</span>
         <span>Mind, Body, and Business</span>
+        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> · <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
       </div>
     </div>
   </footer>
 
   <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
-  <script src="script.js"></script>
 </body>
 </html>
