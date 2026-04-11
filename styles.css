@@ -581,6 +581,7 @@ p { margin-bottom: 1rem; color: var(--gray-700); }
   width: 100%;
   height: 400px;
   object-fit: cover;
+  object-position: center top;
 }
 @media (max-width: 768px) {
   .feature-row, .feature-row.reverse { grid-template-columns: 1fr; gap: 2rem; direction: ltr; }
