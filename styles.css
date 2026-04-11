@@ -245,6 +245,7 @@ p { margin-bottom: 1rem; color: var(--gray-700); }
 }
 .nav-cta {
   margin-left: 0.5rem;
+  color: var(--white) !important;
 }
 .mobile-toggle {
   display: none;
