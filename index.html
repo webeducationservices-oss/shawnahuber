@@ -105,7 +105,7 @@
         <p>Live happier and healthier with high-performance mindset coaching. We help entrepreneurs, athletes, and leaders build the mental systems that drive lasting success.</p>
         <div class="hero-buttons">
           <a href="programs.html" class="btn btn-primary btn-lg">See Our Programs</a>
-          <a href="contact.html" class="btn btn-white btn-lg">Schedule a Call</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Schedule a Call</a>
         </div>
       </div>
     </div>
@@ -203,7 +203,7 @@
         </div>
       </div>
       <div class="text-center fade-up" style="margin-top: 2.5rem;">
-        <a href="programs.html" class="btn btn-primary btn-lg">Join the 5-Day Challenge</a>
+        <a href="#" class="btn btn-primary btn-lg" data-open-challenge>Join the 5-Day Challenge</a>
       </div>
     </div>
   </section>
@@ -371,7 +371,7 @@
       <h2>Ready to Transform Your Mindset?</h2>
       <p>Take the first step toward becoming the best version of yourself. Join the free 5-Day Mindset Awareness Challenge today.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="programs.html" class="btn btn-white btn-lg">Join the Challenge</a>
+        <a href="#" class="btn btn-white btn-lg" data-open-challenge>Join the Challenge</a>
         <a href="https://www.facebook.com/groups/227824444972533" class="btn btn-gold btn-lg" target="_blank">Join the Facebook Group</a>
       </div>
     </div>
@@ -433,5 +433,41 @@
   </footer>
 
   <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Challenge Popup Modal -->
+  <div class="modal-overlay" id="challengeModal">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <span class="section-label">Free Resource</span>
+      <h2>5-Day Mindset Awareness Challenge</h2>
+      <p>Enter your info below to get instant access to the challenge PDF.</p>
+      <form id="challengeForm" data-challenge>
+        <div class="form-fields">
+          <input type="hidden" name="site_slug" value="shawnahuber">
+          <input type="hidden" name="form_type" value="challenge-download">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="recaptcha_token">
+          <div class="form-group">
+            <label for="ch-name">Name *</label>
+            <input type="text" id="ch-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="ch-email">Email *</label>
+            <input type="email" id="ch-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="ch-phone">Phone</label>
+            <input type="tel" id="ch-phone" name="phone">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Get the Challenge PDF</button>
+        </div>
+        <div class="form-success">
+          <div class="success-icon"><i class="fas fa-check" style="font-size:1.5rem"></i></div>
+          <h3>You're In!</h3>
+          <p>Your PDF is opening now. We've also sent it to your email.</p>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

@@ -81,6 +81,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Challenge Modal
+  const challengeModal = document.getElementById('challengeModal');
+  if (challengeModal) {
+    const openModal = () => { challengeModal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+    const closeModal = () => { challengeModal.classList.remove('open'); document.body.style.overflow = ''; };
+
+    document.querySelectorAll('[data-open-challenge]').forEach(btn => {
+      btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+    });
+
+    challengeModal.querySelector('.modal-close').addEventListener('click', closeModal);
+    challengeModal.addEventListener('click', (e) => { if (e.target === challengeModal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && challengeModal.classList.contains('open')) closeModal(); });
+
+    // Challenge form submit
+    const challengeForm = challengeModal.querySelector('form[data-challenge]');
+    if (challengeForm) {
+      challengeForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (challengeForm.querySelector('[name="_honey"]')?.value) return;
+
+        const btn = challengeForm.querySelector('[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        try {
+          if (typeof grecaptcha !== 'undefined') {
+            try {
+              const token = await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'challenge_download' });
+              const tokenField = challengeForm.querySelector('[name="recaptcha_token"]');
+              if (tokenField) tokenField.value = token;
+            } catch (err) { console.warn('reCAPTCHA error:', err); }
+          }
+
+          const formData = new FormData(challengeForm);
+          const data = Object.fromEntries(formData.entries());
+
+          fetch('https://myaieditor.com/api/form-notify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        } catch (err) { console.error('Challenge form error:', err); }
+
+        // Show success + open PDF
+        challengeForm.querySelector('.form-fields').style.display = 'none';
+        challengeForm.querySelector('.form-success').classList.add('show');
+        window.open('ebooks/5-Day Mindset Awareness Challenge-Filled-in (1).pdf', '_blank');
+      });
+    }
+  }
+
   // Form submission via form-notify
   document.querySelectorAll('form[data-ajax]').forEach(form => {
     form.addEventListener('submit', async (e) => {
