@@ -81,6 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Inject anti-bot timestamp into all forms (server rejects submissions < 2s)
+  document.querySelectorAll('form[data-ajax], form[data-challenge]').forEach(form => {
+    let ts = form.querySelector('[name="_ts"]');
+    if (!ts) {
+      ts = document.createElement('input');
+      ts.type = 'hidden';
+      ts.name = '_ts';
+      form.appendChild(ts);
+    }
+    ts.value = Date.now();
+  });
+
   // Challenge Modal
   const challengeModal = document.getElementById('challengeModal');
   if (challengeModal) {
@@ -101,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       challengeForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         if (challengeForm.querySelector('[name="_honey"]')?.value) return;
+        if (challengeForm.querySelector('[name="website"]')?.value) return;
 
         const btn = challengeForm.querySelector('[type="submit"]');
         btn.disabled = true;
@@ -138,8 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Honeypot check
+      // Honeypot check (two traps — bots fill hidden fields with common names)
       if (form.querySelector('[name="_honey"]')?.value) return;
+      if (form.querySelector('[name="website"]')?.value) return;
 
       const btn = form.querySelector('[type="submit"]');
       const originalText = btn.textContent;
