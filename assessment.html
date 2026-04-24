@@ -298,7 +298,14 @@
             <div class="progress-fill" id="progress-fill"></div>
           </div>
 
-          <form id="assessmentForm">
+          <form id="assessmentForm" action="https://myaieditor.com/api/form-notify" method="POST" data-ajax>
+            <!-- Hidden config for form-notify (site_slug, type, reCAPTCHA, honeypot) -->
+            <input type="hidden" name="site_slug" value="shawnahuber">
+            <input type="hidden" name="form_type" value="assessment">
+            <input type="hidden" name="recaptcha_token" id="assessment_recaptcha_token">
+            <input type="hidden" name="_ts" id="assessment_ts">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+
             <!-- Question 1: Self-Awareness -->
             <div class="question-group" data-question="1">
               <h3 class="question-title">How well do you understand your current strengths and areas for improvement?</h3>
@@ -784,9 +791,16 @@
     const totalQuestions = 12;
     const answers = {};
 
+    // reCAPTCHA site key (matches the <script> tag in <head>)
+    const RECAPTCHA_SITE_KEY = '6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh';
+
     // Initialize form
     document.addEventListener('DOMContentLoaded', function() {
       updateProgress();
+
+      // Stamp form load time — form-notify rejects submissions faster than 2s
+      const tsField = document.getElementById('assessment_ts');
+      if (tsField) tsField.value = String(Date.now());
       
       // Add click handlers for radio options
       document.querySelectorAll('.radio-option').forEach(option => {
@@ -948,31 +962,46 @@
       results.scrollIntoView({ behavior: 'smooth' });
     }
 
-    function submitAssessment(formData, scores) {
-      // Prepare submission data
-      const submissionData = new FormData();
-      submissionData.append('site_slug', 'shawnahuber');
-      submissionData.append('form_type', 'assessment');
-      submissionData.append('first_name', formData.get('first_name'));
-      submissionData.append('last_name', formData.get('last_name'));
-      submissionData.append('email', formData.get('email'));
-      submissionData.append('phone', formData.get('phone') || '');
+    async function submitAssessment(formData, scores) {
+      // Honeypot — if a bot filled the hidden _honey field, silently exit
+      const form = document.getElementById('assessmentForm');
+      const honey = form.querySelector('[name="_honey"]');
+      if (honey && honey.value) return;
+
+      // Get a reCAPTCHA v3 token before submitting (required by form-notify)
+      let recaptchaToken = '';
+      try {
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
+          recaptchaToken = await new Promise((resolve) => {
+            grecaptcha.ready(() => {
+              grecaptcha
+                .execute(RECAPTCHA_SITE_KEY, { action: 'assessment' })
+                .then(resolve)
+                .catch(() => resolve(''));
+            });
+          });
+        }
+      } catch (e) {
+        console.warn('reCAPTCHA unavailable:', e);
+      }
+      const tokenField = document.getElementById('assessment_recaptcha_token');
+      if (tokenField) tokenField.value = recaptchaToken;
+
+      // Build submission from the form (picks up all hidden fields) + scores
+      const submissionData = new FormData(form);
       submissionData.append('total_score', scores.totalScore);
       submissionData.append('category_scores', JSON.stringify(scores.categoryScores));
       submissionData.append('detailed_answers', JSON.stringify(scores.answers));
-      
-      // Submit to backend
-      fetch('https://myaieditor.com/api/form-notify', {
-        method: 'POST',
-        body: submissionData
-      })
-      .then(response => response.json())
-      .then(data => {
+
+      try {
+        await fetch('https://myaieditor.com/api/form-notify', {
+          method: 'POST',
+          body: submissionData
+        });
         console.log('Assessment submitted successfully');
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error submitting assessment:', error);
-      });
+      }
     }
   </script>
 </body>
