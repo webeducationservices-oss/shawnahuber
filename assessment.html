@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Mechanics Assessment | Evaluate Your High-Performance Mindset</title>
+  <meta name="description" content="Take our comprehensive 12-question Mental Mechanics Assessment to discover how well you're performing across the core pillars of high-performance mindset coaching.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://shawnahuber.com/assessment">
+  <meta property="og:title" content="Mental Mechanics Assessment | Evaluate Your High-Performance Mindset">
+  <meta property="og:description" content="Take our comprehensive 12-question Mental Mechanics Assessment to discover how well you're performing across the core pillars of high-performance mindset coaching.">
+  <meta property="og:image" content="https://shawnahuber.com/images/mindset-assessment-hero.webp">
+  <meta property="og:url" content="https://shawnahuber.com/assessment">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Mental Mechanics">
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://shawnahuber.com"},
+      {"@type":"ListItem","position":2,"name":"Assessment","item":"https://shawnahuber.com/assessment"}
+    ]
+  }
+  </script>
+  <script src="script.js" defer></script>
+  <!-- Google Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5LVJJFV');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    .assessment-form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 2.5rem;
+    }
+
+    .question-group {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .question-group:last-child {
+      border-bottom: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .question-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .question-subtitle {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .radio-option:hover {
+      border-color: var(--green-light);
+      background: var(--green-pale);
+    }
+
+    .radio-option input[type="radio"] {
+      margin: 0;
+      margin-top: 2px;
+      accent-color: var(--green);
+    }
+
+    .radio-option.selected {
+      border-color: var(--green);
+      background: var(--green-pale);
+    }
+
+    .radio-label {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      line-height: 1.4;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .results-section {
+      display: none;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, var(--green-pale) 0%, var(--white) 100%);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+
+    .results-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+    }
+
+    .results-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+    }
+
+    .results-description {
+      font-size: 1.1rem;
+      color: var(--gray-700);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .score-breakdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .score-category {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--green);
+    }
+
+    .score-category h4 {
+      color: var(--charcoal);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .score-category .score {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+    }
+
+    .score-category p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .assessment-form {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+      
+      .results-score {
+        font-size: 2.5rem;
+      }
+      
+      .results-title {
+        font-size: 1.4rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/gtm.js?id=GTM-5LVJJFV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/Mental Mechanics Logo with tagline Green-1920w.png" alt="The Mental Mechanics" width="200" height="50">
+      </a>
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="programs.html" class="dropdown-trigger">Programs <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px"></i></a>
+          <div class="dropdown-menu">
+            <a href="programs.html">How It Works</a>
+            <a href="business-owner.html">Business Owner Mindset Mastery</a>
+            <a href="equestrian.html">Equestrian Mindset Mastery</a>
+            <a href="baseball.html">Baseball Mindset Mastery</a>
+            <a href="soccer.html">Soccer Mindset Mastery</a>
+            <a href="teen-girls-sports.html">Teen Girls in Sports Mindset Mastery</a>
+            <a href="speaking.html">Speaking</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Schedule a Call</a>
+      </div>
+      <div class="mobile-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <img src="images/mindset-assessment-hero.webp" alt="Mental Mechanics Assessment" style="max-width:300px;margin:0 auto 2rem;display:block;border-radius:var(--radius-lg)" width="300" height="169">
+        <span class="section-label">Free Assessment</span>
+        <h1>Mental Mechanics Assessment</h1>
+        <p>Discover how well you're performing across the 12 core pillars of high-performance mindset coaching. Get your personalized results instantly.</p>
+      </div>
+    </section>
+
+    <!-- Assessment Form -->
+    <section class="section">
+      <div class="container">
+        <div class="assessment-form fade-up">
+          <div class="progress-text">Question <span id="current-question">1</span> of 12</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+
+          <form id="assessmentForm">
+            <!-- Question 1: Self-Awareness -->
+            <div class="question-group" data-question="1">
+              <h3 class="question-title">How well do you understand your current strengths and areas for improvement?</h3>
+              <p class="question-subtitle">Self-awareness is the foundation of all growth and high performance.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q1" value="5">
+                  <span class="radio-label">I have a deep, honest understanding of my strengths and weaknesses and actively work on both</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q1" value="4">
+                  <span class="radio-label">I'm generally aware of my strengths and areas for improvement</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q1" value="3">
+                  <span class="radio-label">I have some awareness but could be more honest with myself</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q1" value="2">
+                  <span class="radio-label">I struggle to objectively assess myself and often avoid difficult truths</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q1" value="1">
+                  <span class="radio-label">I have little awareness of my patterns and tend to blame external circumstances</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2: Certainty & Clarity -->
+            <div class="question-group" data-question="2" style="display:none">
+              <h3 class="question-title">How clear and certain are you about your goals and the path to achieve them?</h3>
+              <p class="question-subtitle">Certainty creates the foundation for confident decision-making and consistent action.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q2" value="5">
+                  <span class="radio-label">I have crystal clear goals with a detailed plan and unwavering belief in my ability to achieve them</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q2" value="4">
+                  <span class="radio-label">My goals are clear and I'm generally confident in my approach</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q2" value="3">
+                  <span class="radio-label">I have goals but sometimes question my path or ability to achieve them</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q2" value="2">
+                  <span class="radio-label">My goals are vague and I frequently doubt my approach</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q2" value="1">
+                  <span class="radio-label">I lack clear direction and constantly second-guess my decisions</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3: Energy Management -->
+            <div class="question-group" data-question="3" style="display:none">
+              <h3 class="question-title">How consistently do you maintain high energy levels throughout your day?</h3>
+              <p class="question-subtitle">Energy is the fuel that drives all high performance - physical, mental, and emotional.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q3" value="5">
+                  <span class="radio-label">I consistently maintain high energy through excellent sleep, nutrition, and recovery practices</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q3" value="4">
+                  <span class="radio-label">My energy is generally good with occasional dips that I manage well</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q3" value="3">
+                  <span class="radio-label">My energy fluctuates and I sometimes struggle to maintain peak performance</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q3" value="2">
+                  <span class="radio-label">I frequently feel drained and rely on caffeine or other stimulants to get through the day</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q3" value="1">
+                  <span class="radio-label">I'm constantly exhausted and can barely make it through basic daily tasks</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 4: Confidence & Self-Belief -->
+            <div class="question-group" data-question="4" style="display:none">
+              <h3 class="question-title">How confident are you in your ability to handle challenges and achieve your goals?</h3>
+              <p class="question-subtitle">True confidence comes from past successes and knowing you can handle whatever comes your way.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q4" value="5">
+                  <span class="radio-label">I have unshakeable confidence in my abilities and see challenges as opportunities to grow</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4" value="4">
+                  <span class="radio-label">I'm generally confident and can usually push through self-doubt</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4" value="3">
+                  <span class="radio-label">My confidence varies depending on the situation and past experiences</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4" value="2">
+                  <span class="radio-label">I often doubt myself and hesitate to take on challenging situations</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4" value="1">
+                  <span class="radio-label">I lack confidence and avoid challenges because I expect to fail</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 5: Efficiency & Focus -->
+            <div class="question-group" data-question="5" style="display:none">
+              <h3 class="question-title">How efficiently do you manage your time and focus on high-impact activities?</h3>
+              <p class="question-subtitle">Efficiency means doing the right things in the right way at the right time.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q5" value="5">
+                  <span class="radio-label">I have excellent systems and consistently focus on the highest-impact activities</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q5" value="4">
+                  <span class="radio-label">I'm generally well-organized and good at prioritizing important tasks</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q5" value="3">
+                  <span class="radio-label">I sometimes get distracted but can usually refocus on what matters most</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q5" value="2">
+                  <span class="radio-label">I frequently get overwhelmed and struggle to prioritize effectively</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q5" value="1">
+                  <span class="radio-label">I'm constantly busy but rarely feel like I'm making meaningful progress</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 6: Effectiveness & Results -->
+            <div class="question-group" data-question="6" style="display:none">
+              <h3 class="question-title">How consistently do you achieve the results you set out to accomplish?</h3>
+              <p class="question-subtitle">Effectiveness is about producing the outcomes that matter, not just staying busy.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q6" value="5">
+                  <span class="radio-label">I consistently achieve or exceed my goals and deliver exceptional results</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q6" value="4">
+                  <span class="radio-label">I usually meet my goals and deliver good results with occasional outstanding outcomes</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q6" value="3">
+                  <span class="radio-label">I achieve some of my goals but results are inconsistent</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q6" value="2">
+                  <span class="radio-label">I frequently fall short of my goals despite putting in effort</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q6" value="1">
+                  <span class="radio-label">I rarely achieve what I set out to do and feel stuck in patterns of underperformance</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 7: Influence & Communication -->
+            <div class="question-group" data-question="7" style="display:none">
+              <h3 class="question-title">How effectively do you communicate and influence others to support your vision?</h3>
+              <p class="question-subtitle">True influence comes from authentic connection and clear communication of shared value.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q7" value="5">
+                  <span class="radio-label">I easily inspire and influence others through clear communication and authentic leadership</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7" value="4">
+                  <span class="radio-label">I communicate well and can usually get buy-in from others</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7" value="3">
+                  <span class="radio-label">My communication is decent but I sometimes struggle to get others on board</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7" value="2">
+                  <span class="radio-label">I often feel misunderstood and have difficulty getting support for my ideas</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7" value="1">
+                  <span class="radio-label">I avoid difficult conversations and struggle to express my ideas clearly</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 8: Alignment & Values -->
+            <div class="question-group" data-question="8" style="display:none">
+              <h3 class="question-title">How well do your daily actions align with your core values and long-term vision?</h3>
+              <p class="question-subtitle">Alignment creates inner peace and sustainable motivation that doesn't require willpower.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q8" value="5">
+                  <span class="radio-label">My actions are completely aligned with my values and I feel authentic in everything I do</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q8" value="4">
+                  <span class="radio-label">I generally live according to my values with occasional compromises</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q8" value="3">
+                  <span class="radio-label">I sometimes act against my values but usually try to course-correct</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q8" value="2">
+                  <span class="radio-label">I frequently compromise my values and feel disconnected from my authentic self</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q8" value="1">
+                  <span class="radio-label">I'm unclear about my values and often feel like I'm living someone else's life</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 9: Mind Mastery -->
+            <div class="question-group" data-question="9" style="display:none">
+              <h3 class="question-title">How well do you manage your thoughts, emotions, and mental state?</h3>
+              <p class="question-subtitle">Mind mastery is the ability to direct your mental resources toward your goals regardless of circumstances.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q9" value="5">
+                  <span class="radio-label">I consistently maintain a positive, focused mental state and quickly recover from setbacks</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q9" value="4">
+                  <span class="radio-label">I generally manage my mental state well with occasional emotional challenges</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q9" value="3">
+                  <span class="radio-label">My mental state fluctuates and sometimes affects my performance</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q9" value="2">
+                  <span class="radio-label">I frequently get stuck in negative thought patterns that impact my results</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q9" value="1">
+                  <span class="radio-label">My thoughts and emotions control me more than I control them</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 10: Physical Health -->
+            <div class="question-group" data-question="10" style="display:none">
+              <h3 class="question-title">How well do you take care of your physical health and body?</h3>
+              <p class="question-subtitle">Your body is the vehicle that carries you to your goals. Peak performance requires peak physiology.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q10" value="5">
+                  <span class="radio-label">I maintain excellent physical health through consistent exercise, nutrition, and recovery practices</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q10" value="4">
+                  <span class="radio-label">I take good care of my body with regular exercise and decent nutrition</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q10" value="3">
+                  <span class="radio-label">My physical health is average - I could definitely improve but it's not terrible</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q10" value="2">
+                  <span class="radio-label">I neglect my physical health and often feel the negative impact on my energy and mood</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q10" value="1">
+                  <span class="radio-label">My physical health is poor and significantly limits my ability to perform at my best</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 11: Consistency & Habits -->
+            <div class="question-group" data-question="11" style="display:none">
+              <h3 class="question-title">How consistently do you follow through on your commitments to yourself and others?</h3>
+              <p class="question-subtitle">Consistency is what transforms good intentions into extraordinary results over time.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q11" value="5">
+                  <span class="radio-label">I consistently follow through on commitments and have strong daily habits that support my goals</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q11" value="4">
+                  <span class="radio-label">I usually keep my commitments and have some good habits in place</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q11" value="3">
+                  <span class="radio-label">My follow-through is inconsistent but I generally try to keep important commitments</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q11" value="2">
+                  <span class="radio-label">I frequently break commitments to myself and struggle with consistency</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q11" value="1">
+                  <span class="radio-label">I rarely follow through on commitments and lack reliable habits or systems</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 12: Accountability & Support -->
+            <div class="question-group" data-question="12" style="display:none">
+              <h3 class="question-title">How effectively do you use accountability and support systems to achieve your goals?</h3>
+              <p class="question-subtitle">High performers understand that success is a team sport and leverage accountability to maintain momentum.</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q12" value="5">
+                  <span class="radio-label">I have strong accountability systems and actively seek feedback and support from others</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q12" value="4">
+                  <span class="radio-label">I have some accountability measures and am generally open to feedback</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q12" value="3">
+                  <span class="radio-label">I sometimes use accountability but could be more consistent about it</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q12" value="2">
+                  <span class="radio-label">I rarely use accountability and often avoid feedback that might be difficult to hear</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q12" value="1">
+                  <span class="radio-label">I prefer to go it alone and resist accountability or feedback from others</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div id="contact-section" style="display:none;">
+              <h3 style="margin-bottom:1.5rem;color:var(--charcoal);text-align:center">Get Your Results</h3>
+              <p style="text-align:center;color:var(--gray-600);margin-bottom:2rem">Enter your information below to receive your personalized assessment results and recommendations.</p>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="first_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="last_name" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem">
+              <button type="button" id="prevBtn" class="btn btn-secondary" onclick="changeQuestion(-1)" style="display:none">Previous</button>
+              <button type="button" id="nextBtn" class="btn btn-primary btn-lg" onclick="changeQuestion(1)">Next Question</button>
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" style="display:none">Get My Results</button>
+            </div>
+          </form>
+
+          <!-- Results Section -->
+          <div class="results-section" id="results">
+            <div class="results-score" id="totalScore">0%</div>
+            <h2 class="results-title" id="resultsTitle">Your Mental Mechanics Score</h2>
+            <p class="results-description" id="resultsDescription">Based on your responses, here's how you're performing across the core pillars of high-performance mindset coaching.</p>
+            
+            <div class="score-breakdown">
+              <div class="score-category">
+                <h4>Self-Awareness & Clarity</h4>
+                <div class="score" id="awarenessClarityScore">0%</div>
+                <p>Understanding yourself and having clear direction</p>
+              </div>
+              <div class="score-category">
+                <h4>Energy & Confidence</h4>
+                <div class="score" id="energyConfidenceScore">0%</div>
+                <p>Maintaining high energy and unshakeable self-belief</p>
+              </div>
+              <div class="score-category">
+                <h4>Efficiency & Effectiveness</h4>
+                <div class="score" id="efficiencyScore">0%</div>
+                <p>Focusing on the right things and getting results</p>
+              </div>
+              <div class="score-category">
+                <h4>Influence & Alignment</h4>
+                <div class="score" id="influenceScore">0%</div>
+                <p>Communicating effectively and living your values</p>
+              </div>
+              <div class="score-category">
+                <h4>Mind & Body Mastery</h4>
+                <div class="score" id="masteryScore">0%</div>
+                <p>Controlling your mental state and physical health</p>
+              </div>
+              <div class="score-category">
+                <h4>Consistency & Accountability</h4>
+                <div class="score" id="consistencyScore">0%</div>
+                <p>Following through and leveraging support systems</p>
+              </div>
+            </div>
+
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Strategy Call</a>
+              <a href="programs.html" class="btn btn-secondary btn-lg">Explore Our Programs</a>
+            </div>
+
+            <p style="font-size:0.9rem;color:var(--gray-600);margin-top:2rem;text-align:center">
+              Want to dive deeper? Our Mental Mechanics programs are designed to help high-performers like you master these exact areas. 
+              <a href="contact.html" style="color:var(--green);font-weight:500">Schedule a call</a> to discuss your personalized development plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/Mental Mechanics Logo Horizontal-1920w.png" alt="The Mental Mechanics" loading="lazy" width="200" height="50">
+          <p>High-performance mindset coaching for entrepreneurs, athletes, and leaders. Live happier and healthier.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/groups/227824444972533" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shawnhuber3" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.tiktok.com/@thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Pages</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="speaking.html">Speaking</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h5>Programs</h5>
+          <div class="footer-links">
+            <a href="business-owner.html">Business Owner Course</a>
+            <a href="equestrian.html">Equestrian Course</a>
+            <a href="baseball.html">Baseball System</a>
+            <a href="soccer.html">Soccer System</a>
+            <a href="teen-girls-sports.html">Teen Girls in Sports</a>
+            <a href="products.html">Recommended Products</a>
+          </div>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <div class="footer-links">
+            <a href="tel:9198243530"><i class="fas fa-phone" style="margin-right:6px"></i> (919) 824-3530</a>
+            <a href="mailto:structuredfreedom@gmail.com"><i class="fas fa-envelope" style="margin-right:6px"></i> Email Us</a>
+            <a href="contact.html"><i class="fas fa-calendar" style="margin-right:6px"></i> Schedule a Call</a>
+          </div>
+          <p style="font-size:0.85rem;margin-top:1rem;color:var(--gray-500)">Palm Harbor, FL 34685<br>Mon - Fri, 9am - 5pm ET</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 The Mental Mechanics. All Rights Reserved.</span>
+        <span>Mind, Body, and Business</span>
+        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> &middot; <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 12;
+    const answers = {};
+
+    // Initialize form
+    document.addEventListener('DOMContentLoaded', function() {
+      updateProgress();
+      
+      // Add click handlers for radio options
+      document.querySelectorAll('.radio-option').forEach(option => {
+        option.addEventListener('click', function() {
+          const radio = this.querySelector('input[type="radio"]');
+          radio.checked = true;
+          
+          // Remove selected class from siblings
+          this.parentNode.querySelectorAll('.radio-option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+          
+          // Add selected class to this option
+          this.classList.add('selected');
+          
+          // Store answer
+          const questionName = radio.name;
+          answers[questionName] = parseInt(radio.value);
+          
+          // Enable next button
+          document.getElementById('nextBtn').disabled = false;
+        });
+      });
+
+      // Form submission
+      document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        calculateResults();
+      });
+    });
+
+    function changeQuestion(direction) {
+      const current = document.querySelector(`[data-question="${currentQuestion}"]`);
+      
+      if (direction === 1) {
+        // Check if current question is answered
+        const currentAnswer = answers[`q${currentQuestion}`];
+        if (!currentAnswer && currentQuestion <= totalQuestions) {
+          alert('Please select an answer before proceeding.');
+          return;
+        }
+        
+        current.style.display = 'none';
+        currentQuestion++;
+        
+        if (currentQuestion > totalQuestions) {
+          showContactSection();
+          return;
+        }
+      } else {
+        current.style.display = 'none';
+        currentQuestion--;
+        
+        if (currentQuestion < 1) {
+          currentQuestion = 1;
+          return;
+        }
+      }
+      
+      // Show new question
+      const next = document.querySelector(`[data-question="${currentQuestion}"]`);
+      if (next) {
+        next.style.display = 'block';
+      }
+      
+      updateProgress();
+      updateButtons();
+    }
+
+    function updateProgress() {
+      document.getElementById('current-question').textContent = currentQuestion;
+      const progress = (currentQuestion / totalQuestions) * 100;
+      document.getElementById('progress-fill').style.width = progress + '%';
+    }
+
+    function updateButtons() {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      
+      prevBtn.style.display = currentQuestion > 1 ? 'block' : 'none';
+      
+      const hasAnswer = answers[`q${currentQuestion}`];
+      nextBtn.disabled = !hasAnswer;
+    }
+
+    function showContactSection() {
+      document.querySelector('.progress-text').style.display = 'none';
+      document.querySelector('.progress-bar').style.display = 'none';
+      document.getElementById('contact-section').style.display = 'block';
+      document.getElementById('nextBtn').style.display = 'none';
+      document.getElementById('submitBtn').style.display = 'block';
+    }
+
+    function calculateResults() {
+      // Collect form data
+      const formData = new FormData(document.getElementById('assessmentForm'));
+      
+      // Calculate scores
+      const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+      const maxScore = totalQuestions * 5;
+      const percentage = Math.round((totalScore / maxScore) * 100);
+      
+      // Calculate category scores
+      const awarenessClarityScore = Math.round(((answers.q1 + answers.q2) / 10) * 100);
+      const energyConfidenceScore = Math.round(((answers.q3 + answers.q4) / 10) * 100);
+      const efficiencyScore = Math.round(((answers.q5 + answers.q6) / 10) * 100);
+      const influenceScore = Math.round(((answers.q7 + answers.q8) / 10) * 100);
+      const masteryScore = Math.round(((answers.q9 + answers.q10) / 10) * 100);
+      const consistencyScore = Math.round(((answers.q11 + answers.q12) / 10) * 100);
+      
+      // Show results
+      document.getElementById('assessmentForm').style.display = 'none';
+      const results = document.getElementById('results');
+      results.style.display = 'block';
+      
+      // Update scores
+      document.getElementById('totalScore').textContent = percentage + '%';
+      document.getElementById('awarenessClarityScore').textContent = awarenessClarityScore + '%';
+      document.getElementById('energyConfidenceScore').textContent = energyConfidenceScore + '%';
+      document.getElementById('efficiencyScore').textContent = efficiencyScore + '%';
+      document.getElementById('influenceScore').textContent = influenceScore + '%';
+      document.getElementById('masteryScore').textContent = masteryScore + '%';
+      document.getElementById('consistencyScore').textContent = consistencyScore + '%';
+      
+      // Update title and description based on score
+      let title, description;
+      if (percentage >= 80) {
+        title = 'Outstanding Performance!';
+        description = 'You\'re operating at an elite level across most areas. Focus on maintaining this excellence while identifying the few areas where you can achieve even greater mastery.';
+      } else if (percentage >= 65) {
+        title = 'Strong Foundation';
+        description = 'You have solid fundamentals in place and are performing well. There are specific areas where focused development can take you to the next level.';
+      } else if (percentage >= 50) {
+        title = 'Growth Opportunity';
+        description = 'You have some strong areas but there\'s significant room for improvement. A structured development plan could dramatically enhance your performance.';
+      } else {
+        title = 'Development Priority';
+        description = 'You have tremendous potential for growth. Investing in mindset coaching and structured development could create life-changing improvements in your results and fulfillment.';
+      }
+      
+      document.getElementById('resultsTitle').textContent = title;
+      document.getElementById('resultsDescription').textContent = description;
+      
+      // Submit to backend
+      submitAssessment(formData, {
+        totalScore: percentage,
+        categoryScores: {
+          awarenessClarityScore,
+          energyConfidenceScore,
+          efficiencyScore,
+          influenceScore,
+          masteryScore,
+          consistencyScore
+        },
+        answers
+      });
+      
+      // Scroll to results
+      results.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitAssessment(formData, scores) {
+      // Prepare submission data
+      const submissionData = new FormData();
+      submissionData.append('site_slug', 'shawnahuber');
+      submissionData.append('form_type', 'assessment');
+      submissionData.append('first_name', formData.get('first_name'));
+      submissionData.append('last_name', formData.get('last_name'));
+      submissionData.append('email', formData.get('email'));
+      submissionData.append('phone', formData.get('phone') || '');
+      submissionData.append('total_score', scores.totalScore);
+      submissionData.append('category_scores', JSON.stringify(scores.categoryScores));
+      submissionData.append('detailed_answers', JSON.stringify(scores.answers));
+      
+      // Submit to backend
+      fetch('https://myaieditor.com/api/form-notify', {
+        method: 'POST',
+        body: submissionData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Assessment submitted successfully');
+      })
+      .catch(error => {
+        console.error('Error submitting assessment:', error);
+      });
+    }
+  </script>
+</body>
+</html>
