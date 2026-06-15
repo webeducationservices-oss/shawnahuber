@@ -31,7 +31,7 @@ if not ANTHROPIC_API_KEY:
     print("ERROR: ANTHROPIC_API_KEY not found")
     sys.exit(1)
 
-MODEL = 'claude-sonnet-4-20250514'
+MODEL = 'claude-sonnet-4-6'  # was claude-sonnet-4-20250514, retired 2026-06-15
 
 ENHANCEMENT_PROMPT = """You are an expert UX writer and SEO content editor for a high-performance mindset coaching website (The Mental Mechanics by Shawn Huber).
 
