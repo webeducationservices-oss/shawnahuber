@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show success + open PDF
         challengeForm.querySelector('.form-fields').style.display = 'none';
         challengeForm.querySelector('.form-success').classList.add('show');
-        window.open('ebooks/5-Day Mindset Awareness Challenge-Filled-in (1).pdf', '_blank');
+        window.open('ebooks/5-Day Mental Wellness Reset.pdf', '_blank');
       });
     }
   }
