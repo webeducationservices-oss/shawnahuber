@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           if (typeof grecaptcha !== 'undefined') {
             try {
-              const token = await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'challenge_download' });
+              const token = await grecaptcha.execute('6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'challenge_download' });
               const tokenField = challengeForm.querySelector('[name="recaptcha_token"]');
               if (tokenField) tokenField.value = token;
             } catch (err) { console.warn('reCAPTCHA error:', err); }
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get reCAPTCHA v3 token
         if (typeof grecaptcha !== 'undefined') {
           try {
-            const token = await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'form_submit' });
+            const token = await grecaptcha.execute('6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh', { action: 'form_submit' });
             const tokenField = form.querySelector('[name="recaptcha_token"]');
             if (tokenField) tokenField.value = token;
           } catch (err) {
