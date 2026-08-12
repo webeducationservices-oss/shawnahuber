@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://shawnahuber.com/soccer">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Mental Mechanics">
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -308,17 +308,16 @@
             <div class="form-fields">
               <input type="hidden" name="site_slug" value="shawnahuber">
               <input type="hidden" name="form_type" value="consultation">
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-            <input type="url" name="website" style="display:none" tabindex="-1" autocomplete="off" placeholder="Website">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" data-lpignore="true" data-1p-ignore>
               <input type="hidden" name="recaptcha_token" id="recaptcha_token_soccer">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="soccer-name">Name</label>
-                  <input type="text" id="soccer-name" name="first_name" class="form-control" placeholder="Your name">
+                  <label for="soccer-name">Name *</label>
+                  <input type="text" id="soccer-name" name="first_name" class="form-control" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
-                  <label for="soccer-email">Email</label>
-                  <input type="email" id="soccer-email" name="email" class="form-control" placeholder="Your email">
+                  <label for="soccer-email">Email *</label>
+                  <input type="email" id="soccer-email" name="email" class="form-control" placeholder="Your email" required>
                 </div>
               </div>
               <div class="form-row">

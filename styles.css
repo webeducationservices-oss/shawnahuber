@@ -2009,3 +2009,26 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 @media (max-width: 900px) {
   .offer-card { padding: 2rem 1.5rem; }
 }
+
+/* Inline form error (validation + failed submit).
+   Selector list keeps the dark red readable inside .section-green / .section-dark,
+   whose `p { color: ... }` rules would otherwise win and render it white-on-pink. */
+.form-error,
+.section-green .form-error,
+.section-dark .form-error,
+.modal-card .form-error {
+  display: none;
+  margin: 0.85rem 0 0;
+  padding: 0.75rem 1rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 3px solid #dc2626;
+  border-radius: 8px;
+  color: #991b1b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.form-error[style*="block"],
+.section-green .form-error[style*="block"],
+.section-dark .form-error[style*="block"],
+.modal-card .form-error[style*="block"] { display: block; }

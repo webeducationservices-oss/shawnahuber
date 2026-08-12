@@ -7,7 +7,7 @@ import os, re, glob
 
 SITE_DIR = os.path.join(os.path.dirname(__file__), '..')
 GTM_ID = 'GTM-5LVJJFV'
-RECAPTCHA_KEY = '6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh'
+RECAPTCHA_KEY = '6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh'
 
 # Consent Mode + GTM head script
 CONSENT_AND_GTM_HEAD = f'''  <!-- Google Consent Mode v2 -->
