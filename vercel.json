@@ -6,20 +6,354 @@
       "source": "/edit",
       "destination": "https://myaieditor.com/",
       "permanent": false
+    },
+    {
+      "source": "/5-causes-of-mental-burnout-in-business-professionals",
+      "destination": "/blog/5-causes-of-mental-burnout-in-business-professionals",
+      "permanent": true
+    },
+    {
+      "source": "/an-unhealthy-successful-business",
+      "destination": "/blog/an-unhealthy-successful-business",
+      "permanent": true
+    },
+    {
+      "source": "/better-business-results-through-hypnosis",
+      "destination": "/blog/better-business-results-through-hypnosis",
+      "permanent": true
+    },
+    {
+      "source": "/business-owner-or-job-creator",
+      "destination": "/blog/business-owner-or-job-creator",
+      "permanent": true
+    },
+    {
+      "source": "/business-tips-from-the-trenches-expert-advice-to-start-your-small-business-or-side-hustle",
+      "destination": "/blog/business-tips-from-the-trenches-expert-advice-to-start-your-small-business-or-side-hustle",
+      "permanent": true
+    },
+    {
+      "source": "/can-stress-and-anxiety-affect-your-body",
+      "destination": "/blog/can-stress-and-anxiety-affect-your-body",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-tips-for-helping-lessen-anxiety",
+      "destination": "/blog/copy-of-tips-for-helping-lessen-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-what-is-considered-a-close-friendship",
+      "destination": "/blog/copy-of-what-is-considered-a-close-friendship",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-where-are-you-in-this-journey",
+      "destination": "/blog/copy-of-where-are-you-in-this-journey",
+      "permanent": true
+    },
+    {
+      "source": "/creating-positive-mental-acceleration",
+      "destination": "/blog/creating-positive-mental-acceleration",
+      "permanent": true
+    },
+    {
+      "source": "/does-health-make-wealth-or-wealth-make-health",
+      "destination": "/blog/does-health-make-wealth-or-wealth-make-health",
+      "permanent": true
+    },
+    {
+      "source": "/does-money-really-affect-motivation",
+      "destination": "/blog/does-money-really-affect-motivation",
+      "permanent": true
+    },
+    {
+      "source": "/embracing-the-unpredictable-navigating-life-when-your-schedule-takes-a-detour",
+      "destination": "/blog/embracing-the-unpredictable-navigating-life-when-your-schedule-takes-a-detour",
+      "permanent": true
+    },
+    {
+      "source": "/equestrian-potential-a-holistic-approach-to-goal-setting",
+      "destination": "/blog/equestrian-potential-a-holistic-approach-to-goal-setting",
+      "permanent": true
+    },
+    {
+      "source": "/executive-high-performance-coaching-and-hypnosis",
+      "destination": "/blog/executive-high-performance-coaching-and-hypnosis",
+      "permanent": true
+    },
+    {
+      "source": "/feeling-excited-frustrated-disappointed-out-of-balancetake-control-before-the-new-year-with-this",
+      "destination": "/blog/feeling-excited-frustrated-disappointed-out-of-balancetake-control-before-the-new-year-with-this",
+      "permanent": true
+    },
+    {
+      "source": "/get-your-vibe-back-with-this-mental-mechanic-tool-the-box-breath",
+      "destination": "/blog/get-your-vibe-back-with-this-mental-mechanic-tool-the-box-breath",
+      "permanent": true
+    },
+    {
+      "source": "/how-consistency-leads-to-success",
+      "destination": "/blog/how-consistency-leads-to-success",
+      "permanent": true
+    },
+    {
+      "source": "/how-do-you-know-if-you-are-valuable",
+      "destination": "/blog/how-do-you-know-if-you-are-valuable",
+      "permanent": true
+    },
+    {
+      "source": "/how-does-anxiety-affect-productivity",
+      "destination": "/blog/how-does-anxiety-affect-productivity",
+      "permanent": true
+    },
+    {
+      "source": "/how-healthy-is-your-business",
+      "destination": "/blog/how-healthy-is-your-business",
+      "permanent": true
+    },
+    {
+      "source": "/how-hypnosis-works-according-to-science",
+      "destination": "/blog/how-hypnosis-works-according-to-science",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-attract-happiness-and-wealth",
+      "destination": "/blog/how-to-attract-happiness-and-wealth",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-be-a-better-person-and-be-happy",
+      "destination": "/blog/how-to-be-a-better-person-and-be-happy",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-build-a-successful-small-personal-business-training-system",
+      "destination": "/blog/how-to-build-a-successful-small-personal-business-training-system",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-deal-with-business-owner-burnout",
+      "destination": "/blog/how-to-deal-with-business-owner-burnout",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-have-both-productive-and-recovery-time-for-huge-success",
+      "destination": "/blog/how-to-have-both-productive-and-recovery-time-for-huge-success",
+      "permanent": true
+    },
+    {
+      "source": "/how-working-in-groups-is-exceptionally-beneficial",
+      "destination": "/blog/how-working-in-groups-is-exceptionally-beneficial",
+      "permanent": true
+    },
+    {
+      "source": "/ics",
+      "destination": "/blog/ics",
+      "permanent": true
+    },
+    {
+      "source": "/introverted-business-leaders-getting-it-done",
+      "destination": "/blog/introverted-business-leaders-getting-it-done",
+      "permanent": true
+    },
+    {
+      "source": "/live-in-alignment-with-your-values-free-training",
+      "destination": "/blog/live-in-alignment-with-your-values-free-training",
+      "permanent": true
+    },
+    {
+      "source": "/my-post",
+      "destination": "/blog/my-post",
+      "permanent": true
+    },
+    {
+      "source": "/no-time",
+      "destination": "/blog/no-time",
+      "permanent": true
+    },
+    {
+      "source": "/overcoming-riding-competition-anxiety-how-hypnosis-sessions-can-transform-your-equestrian-performance",
+      "destination": "/blog/overcoming-riding-competition-anxiety-how-hypnosis-sessions-can-transform-your-equestrian-performance",
+      "permanent": true
+    },
+    {
+      "source": "/personal-success-promoting-business-success",
+      "destination": "/blog/personal-success-promoting-business-success",
+      "permanent": true
+    },
+    {
+      "source": "/real-change-a-journey-of-self-assessment-and-support",
+      "destination": "/blog/real-change-a-journey-of-self-assessment-and-support",
+      "permanent": true
+    },
+    {
+      "source": "/real-success-vs-material-achievements-mental-mechanics",
+      "destination": "/blog/real-success-vs-material-achievements-mental-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/saying-no-to-oneself-in-life-and-business",
+      "destination": "/blog/saying-no-to-oneself-in-life-and-business",
+      "permanent": true
+    },
+    {
+      "source": "/self-evaluation-vs-self-reflection",
+      "destination": "/blog/self-evaluation-vs-self-reflection",
+      "permanent": true
+    },
+    {
+      "source": "/the-conscious-and-sub-conscious-mind-working-together-better",
+      "destination": "/blog/the-conscious-and-sub-conscious-mind-working-together-better",
+      "permanent": true
+    },
+    {
+      "source": "/tips-for-helping-lessen-anxiety",
+      "destination": "/blog/tips-for-helping-lessen-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/unleashing-quantum-potential-and-positive-energy-for-business-success",
+      "destination": "/blog/unleashing-quantum-potential-and-positive-energy-for-business-success",
+      "permanent": true
+    },
+    {
+      "source": "/visualization-techniques-for-improved-performance",
+      "destination": "/blog/visualization-techniques-for-improved-performance",
+      "permanent": true
+    },
+    {
+      "source": "/what-does-a-gratitude-list-look-like",
+      "destination": "/blog/what-does-a-gratitude-list-look-like",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-considered-a-close-friendship",
+      "destination": "/blog/what-is-considered-a-close-friendship",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-the-point-of-celebrating-birthdays",
+      "destination": "/blog/what-is-the-point-of-celebrating-birthdays",
+      "permanent": true
+    },
+    {
+      "source": "/when-high-performers-struggle",
+      "destination": "/blog/when-high-performers-struggle",
+      "permanent": true
+    },
+    {
+      "source": "/where-are-you-in-this-journey",
+      "destination": "/blog/where-are-you-in-this-journey",
+      "permanent": true
+    },
+    {
+      "source": "/where-did-my-passion-go-in-my-life-and-business",
+      "destination": "/blog/where-did-my-passion-go-in-my-life-and-business",
+      "permanent": true
+    },
+    {
+      "source": "/where-is-motivation-in-the-brain",
+      "destination": "/blog/where-is-motivation-in-the-brain",
+      "permanent": true
+    },
+    {
+      "source": "/why-detox-your-mind-and-your-body-at-the-same-time",
+      "destination": "/blog/why-detox-your-mind-and-your-body-at-the-same-time",
+      "permanent": true
+    },
+    {
+      "source": "/why-do-i-think-the-coaching-and-most-services-based-business-will-implode-soon",
+      "destination": "/blog/why-do-i-think-the-coaching-and-most-services-based-business-will-implode-soon",
+      "permanent": true
+    },
+    {
+      "source": "/why-is-running-a-business-so-stressful",
+      "destination": "/blog/why-is-running-a-business-so-stressful",
+      "permanent": true
+    },
+    {
+      "source": "/why-is-taking-action-important",
+      "destination": "/blog/why-is-taking-action-important",
+      "permanent": true
+    },
+    {
+      "source": "/why-quality-sleep-is-important",
+      "destination": "/blog/why-quality-sleep-is-important",
+      "permanent": true
+    },
+    {
+      "source": "/why-working-in-groups-is-better",
+      "destination": "/blog/why-working-in-groups-is-better",
+      "permanent": true
+    },
+    {
+      "source": "/why-you-should-not-take-shortcuts",
+      "destination": "/blog/why-you-should-not-take-shortcuts",
+      "permanent": true
+    },
+    {
+      "source": "/working-on-yourself-to-grow-a-better-life-and-business",
+      "destination": "/blog/working-on-yourself-to-grow-a-better-life-and-business",
+      "permanent": true
+    },
+    {
+      "source": "/baseball-mindset-mastery-system",
+      "destination": "/baseball",
+      "permanent": true
+    },
+    {
+      "source": "/equestrian-mindset-mastery-course",
+      "destination": "/equestrian",
+      "permanent": true
+    },
+    {
+      "source": "/soccer-mindset-mastery-system",
+      "destination": "/soccer",
+      "permanent": true
+    },
+    {
+      "source": "/connection-call",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/hypnosis-session",
+      "destination": "/how-we-work",
+      "permanent": true
+    },
+    {
+      "source": "/checkout",
+      "destination": "/programs",
+      "permanent": true
+    },
+    {
+      "source": "/megan-shawn-huber",
+      "destination": "/about",
+      "permanent": true
     }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "ALLOWALL" },
-        { "key": "Content-Security-Policy", "value": "frame-ancestors *" }
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOWALL"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors *"
+        }
       ]
     },
     {
       "source": "/(.+\\.(?:jpg|jpeg|png|gif|svg|webp|ico|woff2?))",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]
