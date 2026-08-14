@@ -24,6 +24,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://shawnahuber.com/#business",
   "name": "The Mental Mechanics",
   "alternateName": "Shawn Huber - Mental Wellness Coach for High Achievers",
   "url": "https://shawnahuber.com",
@@ -38,6 +39,9 @@
     "postalCode": "37069",
     "addressCountry": "US"
   },
+  "geo": { "@type": "GeoCoordinates", "latitude": 35.9954, "longitude": -86.9123 },
+  "hasMap": "https://www.google.com/maps/place/Franklin,+TN+37069",
+  "founder": { "@id": "https://shawnahuber.com/#shawn" },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
@@ -79,27 +83,38 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://shawnahuber.com/#website",
   "name": "The Mental Mechanics",
-  "url": "https://shawnahuber.com"
+  "url": "https://shawnahuber.com",
+  "inLanguage": "en-US",
+  "publisher": { "@id": "https://shawnahuber.com/#business" }
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "The Mental Mechanics",
-  "url": "https://shawnahuber.com",
-  "logo": "https://shawnahuber.com/images/Mental Mechanics Logo with tagline Green-1920w.png",
-  "telephone": "+1-919-824-3530",
-  "email": "structuredfreedom@gmail.com",
-  "description": "Mental wellness coaching for high-achieving entrepreneurs, athletes, and leaders. Private and group sessions.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Franklin",
-    "addressRegion": "TN",
-    "postalCode": "37069",
-    "addressCountry": "US"
-  },
+  "@type": "Person",
+  "@id": "https://shawnahuber.com/#shawn",
+  "name": "Shawn Huber",
+  "url": "https://shawnahuber.com/about",
+  "image": "https://shawnahuber.com/images/Shawn Black Shirt-1920w.jpeg",
+  "jobTitle": "Mental Wellness Coach",
+  "description": "Certified High Performance Coach and Certified Hypnotherapist with 25+ years helping entrepreneurs, athletes and leaders build the mental systems behind sustained performance.",
+  "worksFor": { "@id": "https://shawnahuber.com/#business" },
+  "knowsAbout": [
+    "Mental wellness coaching",
+    "High performance coaching",
+    "Hypnotherapy",
+    "Neuro-Linguistic Programming",
+    "Visualization and mental rehearsal",
+    "Executive burnout and recovery",
+    "Sports performance psychology"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certified High Performance Coach" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certified Hypnotherapist" }
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Franklin", "addressRegion": "TN", "addressCountry": "US" },
   "sameAs": [
     "https://www.facebook.com/groups/227824444972533",
     "https://www.instagram.com/shawnhuber3",
@@ -176,6 +191,7 @@
             <div class="dropdown-divider"></div>
             <a href="mastermind.html"><i class="fas fa-users"></i>Group Sessions</a>
             <a href="speaking.html"><i class="fas fa-microphone"></i>Speaking & Events</a>
+            <a href="mental-wellness-coach-franklin-tn.html"><i class="fas fa-location-dot"></i>Franklin, TN</a>
           </div>
         </div>
         <a href="about.html">About</a>
@@ -332,8 +348,30 @@
     </div>
   </section>
 
-  <!-- Not Therapy / Where We Fit -->
+  <!-- Hypnotherapy -->
   <section class="section">
+    <div class="container">
+      <div class="feature-row fade-up">
+        <div>
+          <span class="section-label">Hypnotherapy</span>
+          <h2>When Willpower Isn't the Problem</h2>
+          <p>You already know what you should do. The books are read, the routines are built. And the same pattern still shows up &mdash; the hesitation before a big decision, the stress response that fires before you've registered a threat, the follow-through that fades once the novelty does.</p>
+          <p>That isn't a discipline problem. Willpower works at the conscious level; those patterns don't live there. <strong>Hypnotherapy works on the level underneath</strong> &mdash; and it's the reason change made here tends to hold instead of fading the moment life gets busy.</p>
+          <p style="font-size:0.95rem;color:var(--gray-500)">Fully awake, fully in control, nothing like the stage version. One instrument among several, used when the pattern warrants it.</p>
+          <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap">
+            <a href="hypnotherapy.html" class="btn btn-primary">Explore Hypnotherapy</a>
+            <a href="how-we-work.html" class="btn btn-secondary">See How We Work</a>
+          </div>
+        </div>
+        <div class="feature-img">
+          <img src="images/SHAWN SITTING ON STAIRS IN THOUGHT-1920w.png" alt="Shawn Huber, Certified Hypnotherapist, in a moment of reflection" loading="lazy" width="600" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not Therapy / Where We Fit -->
+  <section class="section section-alt">
     <div class="container">
       <div class="text-center fade-up" style="margin-bottom: 3rem;">
         <span class="section-label">Where We Fit</span>
@@ -368,7 +406,7 @@
   </section>
 
   <!-- 6 Pillars Challenge -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="text-center fade-up" style="margin-bottom: 3rem;">
         <span class="section-label">Free Challenge</span>
@@ -414,7 +452,7 @@
   </section>
 
   <!-- Meet Your Coach -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="feature-row reverse fade-up">
         <div>
@@ -435,7 +473,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="text-center fade-up" style="margin-bottom: 3rem;">
         <span class="section-label">Success Stories</span>
@@ -566,7 +604,7 @@
   </section>
 
   <!-- Certifications -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container text-center fade-up">
       <span class="section-label">Memberships & Certifications</span>
       <h2 class="section-title">Trusted Credentials</h2>
@@ -626,6 +664,7 @@
             <a href="baseball.html">For Baseball Players</a>
             <a href="soccer.html">For Soccer Players</a>
             <a href="teen-girls-sports.html">Teen Girls in Sports</a>
+            <a href="hypnotherapy.html">Hypnotherapy</a>
             <a href="how-we-work.html">How We Work</a>
             <a href="products.html">Recommended Products</a>
           </div>
