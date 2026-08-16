@@ -12,11 +12,15 @@
   <meta property="og:url" content="https://shawnahuber.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Mental Mechanics">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preload" as="image" type="image/webp" href="images/hero-shawn.webp" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/PlayfairDisplay-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
   <script src="script.js" defer></script>
@@ -228,7 +232,11 @@
       </div>
     </div>
     <div class="hero-split-right">
-      <img src="images/Shawn Huber Structured Freedom Sitting in nature-1920w.jpeg" alt="Shawn Huber - Mental Wellness Coach for high achievers" width="600" height="400">
+      <picture>
+        <source srcset="images/hero-shawn.webp" type="image/webp">
+        <img src="images/hero-shawn.jpg" alt="Shawn Huber, mental wellness coach for high achievers, sitting outdoors"
+             width="1200" height="960" fetchpriority="high" decoding="async">
+      </picture>
     </div>
   </section>
 
@@ -364,7 +372,7 @@
           </div>
         </div>
         <div class="feature-img">
-          <img src="images/SHAWN SITTING ON STAIRS IN THOUGHT-1920w.png" alt="Shawn Huber, Certified Hypnotherapist, in a moment of reflection" loading="lazy" width="600" height="400">
+          <img src="images/SHAWN SITTING ON STAIRS IN THOUGHT-1920w.jpg" alt="Shawn Huber, Certified Hypnotherapist, in a moment of reflection" loading="lazy" width="600" height="400">
         </div>
       </div>
     </div>

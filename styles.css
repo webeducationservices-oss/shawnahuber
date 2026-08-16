@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Inter Fallback', system-ui, -apple-system, sans-serif;
   color: #1a1a2e;
   line-height: 1.7;
   background: #fff;
@@ -47,7 +47,7 @@ button, input, textarea, select {
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--charcoal);
@@ -654,7 +654,7 @@ body { padding-top: 0; }
   transform: translateY(-4px);
 }
 .pillar-card .pillar-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--gold);
@@ -676,7 +676,7 @@ body { padding-top: 0; }
   transform: translateY(-4px);
 }
 .testimonial-card .quote-mark {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 4rem;
   color: var(--green-pale);
   line-height: 1;
@@ -787,7 +787,7 @@ body { padding-top: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -889,7 +889,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 }
 .stat-item { text-align: center; }
 .stat-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--gold);
@@ -1210,7 +1210,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   margin-bottom: 0.25rem;
 }
 .modal-card h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -1258,7 +1258,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   border: 1px solid var(--gray-200);
 }
 .session-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
   color: var(--charcoal);
@@ -1337,7 +1337,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   padding: 1.5rem;
 }
 .blog-card-body h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: var(--charcoal);
@@ -1381,7 +1381,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 }
 .blog-article-header { margin-bottom: 2rem; }
 .blog-article-header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 2.2rem;
   line-height: 1.3;
   margin-bottom: 1rem;
@@ -1410,7 +1410,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 }
 .blog-article-body p { margin-bottom: 1.5rem; }
 .blog-article-body h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.5rem;
   margin: 2rem 0 1rem;
   color: var(--charcoal);
@@ -1622,7 +1622,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .callout-body { flex: 1; min-width: 0; }
 .callout-body h4 {
   margin: 0 0 0.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.15rem;
   color: var(--charcoal);
 }
@@ -1682,7 +1682,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .blog-stat-card:hover { border-color: var(--green); transform: translateY(-2px); }
 .blog-stat-card .stat-num {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 2.25rem;
   font-weight: 700;
   color: var(--green);
@@ -1712,7 +1712,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -1795,7 +1795,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   border-radius: 50%;
 }
 .blog-cta-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.5rem;
   color: var(--white);
   margin: 0 0 0.75rem;
@@ -1818,7 +1818,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   background: var(--green-pale);
   border-radius: 12px;
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   font-size: 1.35rem;
   line-height: 1.5;
   color: var(--charcoal);
@@ -1833,7 +1833,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   color: var(--green);
   font-style: normal;
   line-height: 1;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
 }
 .blog-pullquote cite {
   display: block;
@@ -1855,7 +1855,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 }
 .blog-takeaways h3 {
   margin: 0 0 1rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
   color: var(--charcoal);
   font-size: 1.25rem;
   display: flex;
