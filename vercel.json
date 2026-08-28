@@ -331,6 +331,11 @@
       "source": "/megan-shawn-huber",
       "destination": "/about",
       "permanent": true
+    },
+    {
+      "source": "/blog/copy-of-what-is-considered-a-close-friendship",
+      "destination": "/blog/ways-to-reduce-holiday-stress",
+      "permanent": true
     }
   ],
   "headers": [

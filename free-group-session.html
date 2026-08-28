@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Group Session for High Achievers | The Mental Mechanics</title>
+  <meta name="description" content="Group mental wellness sessions for founders, executives and competitive athletes carrying it alone. Your first 90-minute session is free, and we match you to the right room.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/PlayfairDisplay-latin.woff2" crossorigin>
+  <link rel="preload" as="image" href="images/group-session-hero.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://shawnahuber.com/free-group-session">
+  <meta property="og:title" content="Free Group Session for High Achievers | The Mental Mechanics">
+  <meta property="og:description" content="Group mental wellness sessions for founders, executives and competitive athletes carrying it alone. Your first 90-minute session is free, and we match you to the right room.">
+  <meta property="og:image" content="https://shawnahuber.com/images/group-session-hero.jpg">
+  <meta property="og:url" content="https://shawnahuber.com/free-group-session">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Mental Mechanics">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Group Session for High Achievers | The Mental Mechanics">
+  <meta name="twitter:description" content="Group mental wellness sessions for founders, executives and competitive athletes carrying it alone. Your first 90-minute session is free, and we match you to the right room.">
+  <meta name="twitter:image" content="https://shawnahuber.com/images/group-session-hero.jpg">
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+
+  <style>
+    .match-form{max-width:820px;margin:0 auto;background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:2.5rem}
+    @media(max-width:640px){.match-form{padding:1.5rem}}
+    .match-progress{height:6px;background:var(--gray-100);border-radius:99px;overflow:hidden;margin-bottom:.75rem}
+    .match-progress-bar{height:100%;width:11%;background:var(--green);border-radius:99px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+    .match-step-count{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-500);margin:0 0 1.75rem;font-weight:600}
+    .match-step{display:none;border:0;padding:0;margin:0;min-height:340px}
+    .match-step.is-active{display:block;animation:matchIn .3s ease}
+    @keyframes matchIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .match-step .question-title{font-family:'Playfair Display','Playfair Fallback',Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);line-height:1.35;margin:0 0 .5rem;padding:0;display:block;width:100%}
+    .match-step .question-subtitle{font-size:.92rem;color:var(--gray-500);margin:0 0 1.5rem}
+    .radio-group{display:flex;flex-direction:column;gap:.7rem}
+    .radio-option{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 1.1rem;border:2px solid var(--gray-100);border-radius:var(--radius-md);cursor:pointer;transition:var(--transition);background:var(--white)}
+    .radio-option:hover{border-color:var(--green-light);background:var(--green-pale)}
+    .radio-option input[type=radio]{margin:3px 0 0;accent-color:var(--green);flex:none}
+    .radio-option.selected{border-color:var(--green);background:var(--green-pale)}
+    .radio-label{font-size:.98rem;color:var(--gray-900);line-height:1.5}
+    .radio-label small{color:var(--gray-500)}
+    .match-step .checkbox-group{display:flex;flex-direction:column;gap:.7rem}
+    .match-step .checkbox-label{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 1.1rem;border:2px solid var(--gray-100);border-radius:var(--radius-md);cursor:pointer;transition:var(--transition);font-size:.98rem;color:var(--gray-900);line-height:1.5}
+    .match-step .checkbox-label:hover{border-color:var(--green-light);background:var(--green-pale)}
+    .match-step .checkbox-label.selected{border-color:var(--green);background:var(--green-pale)}
+    .match-step .checkbox-label input{margin:3px 0 0;accent-color:var(--green);flex:none}
+    .match-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--gray-100)}
+    .match-nav .btn-primary{margin-left:auto}
+    .match-error{color:#b3261e;font-size:.9rem;margin:.85rem 0 0;font-weight:500}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://shawnahuber.com/free-group-session#service",
+  "name": "Group Mental Wellness Sessions for High Achievers",
+  "serviceType": "Group mental wellness coaching",
+  "description": "Facilitated 90-minute group sessions for founders, executives, practice owners and competitive athletes. Participants are matched into small peer groups of comparable responsibility. The first session is free.",
+  "url": "https://shawnahuber.com/free-group-session",
+  "image": "https://shawnahuber.com/images/group-session-hero.jpg",
+  "provider": {
+    "@id": "https://shawnahuber.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "City",
+      "name": "Franklin",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tennessee"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Nashville",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tennessee"
+      }
+    }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Founders, executives, practice owners and competitive athletes"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "description": "First 90-minute group session at no cost",
+    "url": "https://shawnahuber.com/free-group-session"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the first group session really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A full ninety-minute session with your matched group, with no card and no obligation. If you want to keep your seat afterwards, that is a separate conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the matching questionnaire so long?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the room is the product. Nine questions is what it takes to seat you next to people carrying comparable weight, in a register you think well in, at a time you can genuinely keep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who else is in the room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five or six people carrying comparable responsibility \u2014 founders, executives, practice owners and competitive athletes. Not necessarily your industry; what matters is that the pressure is recognisable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is what I say in a group session confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything in the room stays in the room, agreed by the group before anyone speaks. Coaching is not a legally privileged relationship the way licensed therapy is, and we say so plainly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose group or private sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the hardest part is that nobody around you understands the position, group is usually faster. If there is one specific pattern you want dismantled, private sessions go deeper. Many people do both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is mental wellness and performance coaching for people who are functioning and want to function better. It is not treatment or diagnosis and is not a substitute for clinical care."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shawnahuber.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Coaching",
+      "item": "https://shawnahuber.com/programs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Free Group Session",
+      "item": "https://shawnahuber.com/free-group-session"
+    }
+  ]
+}
+  </script>
+  <script src="script.js" defer></script>
+  <!-- Google Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5LVJJFV');</script>
+  <!-- End Google Tag Manager -->
+  <script src="/mae-edit-loader.js" async></script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LVJJFV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<!-- Top utility bar -->
+  <div class="nav-utility">
+    <div class="nav-utility-inner">
+      <div class="nav-utility-left">
+        <a href="tel:9198243530"><i class="fas fa-phone"></i> (919) 824-3530</a>
+        <a href="mailto:structuredfreedom@gmail.com" class="nav-utility-email"><i class="fas fa-envelope"></i> structuredfreedom@gmail.com</a>
+      </div>
+      <div class="nav-utility-right">
+        <a href="https://www.facebook.com/groups/227824444972533" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/shawnhuber3" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="The Mental Mechanics — Home">
+        <img src="images/Mental Mechanics Logo with tagline Green-1920w.png" alt="The Mental Mechanics" width="200" height="50">
+      </a>
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="programs.html" class="dropdown-trigger active">Coaching <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-section">Get Started</div>
+            <a href="free-group-session.html"><i class="fas fa-user-group"></i><span><strong>Free Group Session</strong><br><small style="color:var(--gray-500);font-weight:400">First session is free</small></span></a>
+            <a href="programs.html"><i class="fas fa-compass"></i><span><strong>How It Works</strong><br><small style="color:var(--gray-500);font-weight:400">Private &amp; group sessions</small></span></a>
+            <a href="how-we-work.html"><i class="fas fa-screwdriver-wrench"></i><span><strong>How We Work</strong><br><small style="color:var(--gray-500);font-weight:400">The methods behind it</small></span></a>
+            <a href="hypnotherapy.html"><i class="fas fa-brain"></i><span><strong>Hypnotherapy</strong><br><small style="color:var(--gray-500);font-weight:400">For entrepreneurs</small></span></a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-section">Who I Help</div>
+            <a href="business-owner.html"><i class="fas fa-briefcase"></i>For Business Owners</a>
+            <a href="equestrian.html"><i class="fas fa-horse"></i>For Equestrians</a>
+            <a href="baseball.html"><i class="fas fa-baseball"></i>For Baseball Players</a>
+            <a href="soccer.html"><i class="fas fa-futbol"></i>For Soccer Players</a>
+            <a href="teen-girls-sports.html"><i class="fas fa-star"></i>For Teen Girls in Sports</a>
+            <div class="dropdown-divider"></div>
+            <a href="mastermind.html"><i class="fas fa-users"></i>Group Sessions</a>
+            <a href="speaking.html"><i class="fas fa-microphone"></i>Speaking & Events</a>
+            <a href="mental-wellness-coach-franklin-tn.html"><i class="fas fa-location-dot"></i>Franklin, TN</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <a href="blog.html" class="dropdown-trigger">Resources <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="blog.html"><i class="fas fa-pen-fancy"></i>Blog</a>
+            <a href="assessment.html"><i class="fas fa-clipboard-check"></i>Free Assessment</a>
+            <a href="lonely-at-the-top.html"><i class="fas fa-user-clock"></i>Lonely at the Top</a>
+            <a href="products.html"><i class="fas fa-shopping-bag"></i>Recommended Products</a>
+            <a href="index.html#challenge"><i class="fas fa-bolt"></i>5-Day Mental Wellness Reset</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta"><i class="fas fa-calendar-check" style="margin-right:6px"></i>Schedule a Call</a>
+      </div>
+      <div class="mobile-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-split">
+      <div class="container">
+        <div class="hero-split-content">
+          <div class="hero-split-left">
+            <span class="section-label">Free First Session</span>
+            <h1>You built the thing. Now there&rsquo;s no one you can say the hard part out loud to.</h1>
+            <p class="section-subtitle">Group sessions for high achievers who are doing well on paper and carrying most of it alone. Your first session is free, and we match you into a room on purpose &mdash; not at random.</p>
+            <div class="hero-buttons">
+              <a href="#match" class="btn btn-primary btn-lg"><i class="fas fa-users" style="margin-right:8px"></i>Find My Room</a>
+              <a href="#what-happens" class="btn btn-secondary btn-lg">See how a session runs</a>
+            </div>
+            <p style="margin-top:1.25rem;font-size:0.9rem;color:var(--gray-500)">Takes about 4 minutes &middot; No card, no obligation &middot; Coaching, not therapy</p>
+          </div>
+          <div class="hero-split-right">
+            <img src="images/group-session-hero.jpg" alt="A small group of professionals in an unhurried conversation around a low table" class="hero-split-img" width="1376" height="768" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="section">
+      <div class="container">
+        <div style="max-width:760px;margin:0 auto">
+          <span class="section-label">The part nobody warns you about</span>
+          <h2 class="section-title" style="text-align:left">Success is very good at removing the people who could tell you the truth</h2>
+          <p>It happens gradually and it happens to almost everyone who climbs. Your team can&rsquo;t hear your doubt &mdash; you&rsquo;re the one holding the floor steady. Your family sees the outcome, not the cost. Your friends from before are proud of you in a way that quietly ends the conversation. Your peers are competitors, or clients, or both.</p>
+          <p>So you get very good at a specific skill: sounding fine. And the better you get at it, the fewer people are left who would notice if you weren&rsquo;t.</p>
+          <p>This is not a character flaw. It is a structural feature of the position you&rsquo;re in, and the research on it is not subtle.</p>
+        </div>
+
+        <div class="blog-stat-grid" style="margin-top:2.5rem">
+          <div class="blog-stat-card">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">of CEOs report experiencing loneliness in the role</div>
+          </div>
+          <div class="blog-stat-card">
+            <div class="stat-number">61%</div>
+            <div class="stat-label">of those say it is hurting their performance</div>
+          </div>
+          <div class="blog-stat-card">
+            <div class="stat-number">55%</div>
+            <div class="stat-label">of CEOs reported anxiety, depression or burnout in 2024</div>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.85rem;color:var(--gray-500);margin-top:1rem">Sources: Harvard Business Review CEO loneliness research; 2024 CEO mental health reporting. <a href="lonely-at-the-top">The full breakdown of why this happens &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- WHAT THIS IS -->
+    <section class="section section-alt" id="what-happens">
+      <div class="container">
+        <span class="section-label">What a group session actually is</span>
+        <h2 class="section-title">Five or six people who are carrying something comparable, in a room where nobody has to perform</h2>
+        <p class="section-subtitle" style="max-width:780px;margin:0 auto 2.5rem">It is not a networking group. Nobody pitches. There is no round-robin of wins. It is ninety minutes of working on the thing underneath the thing &mdash; with people who recognise the weight because they are carrying one of their own.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-comments"></i></div>
+            <h3>You say the real version</h3>
+            <p>Not the board version, not the LinkedIn version. The one where you admit the growth is working and you still feel hollow at 6pm. That sentence is usually the whole session.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-ear-listen"></i></div>
+            <h3>You get heard by equals</h3>
+            <p>Advice from someone who has never held payroll lands differently than a nod from someone who has. Peer recognition is the active ingredient, and it cannot be faked.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+            <h3>You leave with one mechanic</h3>
+            <p>Every session ends with one concrete thing to run &mdash; a pattern to interrupt, a conversation to have, a decision to stop re-deciding. One, not ten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW A SESSION RUNS -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-row">
+          <div>
+            <span class="section-label">Ninety minutes</span>
+            <h2 style="text-align:left">How the session runs</h2>
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Where everyone actually is</h3>
+                <p>Ten minutes. Not updates &mdash; a temperature. What&rsquo;s loud in your head this week. Most people find this is the hardest part exactly once.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>One person goes deep</h3>
+                <p>Forty minutes on whoever needs it most that week. The rest of the room works the problem with them. You will be surprised how often someone else&rsquo;s session is the one that moves you.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>The mechanic</h3>
+                <p>Twenty-five minutes where I bring one tool to the pattern in the room &mdash; from performance coaching, hypnotherapy, NLP or visualization, depending on what&rsquo;s actually in the way. <a href="how-we-work">More on the methods</a>.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>What you&rsquo;re running this week</h3>
+                <p>Fifteen minutes. Each person names one thing. The room remembers it next time, which is most of why it gets done.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="images/group-session-circle.jpg" alt="Five professionals seated in a circle, one speaking while the others listen" class="feature-img" width="1376" height="768" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IS IN THE ROOM / WHY MATCHING -->
+    <section class="section section-dark">
+      <div class="container">
+        <span class="section-label">Why we ask before we seat you</span>
+        <h2 class="section-title">A group only works if the room is right</h2>
+        <p class="section-subtitle" style="max-width:780px;margin:0 auto 2.5rem">The single biggest predictor of whether a group session lands is whether the other people in it recognise your situation. Put a solo founder in a room of corporate VPs and both sides spend ninety minutes translating. That is why the questionnaire below is longer than a name-and-email box &mdash; it is the seating chart.</p>
+        <div class="grid-2">
+          <div class="offer-card">
+            <div class="offer-icon"><i class="fas fa-scale-balanced"></i></div>
+            <h3>Comparable weight</h3>
+            <p>Not the same industry &mdash; the same order of pressure. Someone who signs the payroll belongs with others who sign the payroll.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon"><i class="fas fa-compass"></i></div>
+            <h3>Compatible register</h3>
+            <p>Some people think best when the room pushes. Others need it quiet before they will say anything true. Mixing those badly wastes everyone&rsquo;s evening.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon"><i class="fas fa-user-shield"></i></div>
+            <h3>No overlap you&rsquo;d regret</h3>
+            <p>You tell us who you would rather not be in a room with &mdash; a competitor, a client, someone from your own board. We take that seriously.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>A time you will actually keep</h3>
+            <p>A group you miss is worse than no group. We seat you where your calendar can genuinely hold it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOUNDARY -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="max-width:820px;margin:0 auto">
+          <span class="section-label">Let&rsquo;s be clear about what this is not</span>
+          <h2 class="section-title" style="text-align:left">This is coaching. It is not therapy, and it is not a substitute for it.</h2>
+          <div class="grid-2" style="margin-top:2rem">
+            <div class="compare-card compare-card-highlight">
+              <h3>A good fit if you are</h3>
+              <ul class="offer-list">
+                <li>Functioning well and performing &mdash; and privately running on empty</li>
+                <li>Carrying decisions you cannot discuss with your team or your family</li>
+                <li>Successful by every external measure and quietly unsatisfied by it</li>
+                <li>Looking for peers and a method, not a diagnosis</li>
+              </ul>
+            </div>
+            <div class="compare-card">
+              <h3>Not the right room if you are</h3>
+              <ul class="offer-list">
+                <li>In crisis, or having thoughts of harming yourself</li>
+                <li>Working through trauma, grief or a clinical condition</li>
+                <li>Looking for medication, diagnosis or clinical treatment</li>
+                <li>Wanting a room to sell into</li>
+              </ul>
+              <p style="margin-top:1rem;font-size:0.9rem;color:var(--gray-700)">If any of the above is where you are, a licensed therapist is the right call and I will say so. In the US you can reach the Suicide &amp; Crisis Lifeline any time by calling or texting <strong>988</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE QUESTIONNAIRE -->
+    <section class="section" id="match">
+      <div class="container">
+        <span class="section-label">Step one</span>
+        <h2 class="section-title">Find your room</h2>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto 2.5rem">Nine questions, about four minutes. Every one of them is used to seat you &mdash; we do not run open-enrolment groups. Your first session is free and there is nothing to pay after it unless you want to keep your seat.</p>
+
+        <form class="match-form" action="https://myaieditor.com/api/form-notify" method="POST" data-ajax id="matchForm" novalidate>
+          <div class="form-fields">
+            <input type="hidden" name="site_slug" value="shawnahuber">
+            <input type="hidden" name="form_type" value="group-session-match">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" data-lpignore="true" data-1p-ignore>
+            <input type="hidden" name="wants_from_room" id="wants_from_room">
+            <input type="hidden" name="availability" id="availability">
+
+            <div class="match-progress" aria-hidden="true">
+              <div class="match-progress-bar" id="matchBar"></div>
+            </div>
+            <p class="match-step-count" id="matchCount">Question 1 of 9</p>
+
+            <!-- 1 -->
+            <fieldset class="match-step is-active" data-step="1">
+              <legend class="question-title">Which of these is closest to your situation right now?</legend>
+              <p class="question-subtitle">This is the first thing we match on &mdash; rooms work when the pressure is comparable.</p>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="role" value="Founder or business owner" required><span class="radio-label"><strong>Founder or business owner</strong><br><small>The buck stops with you, including payroll</small></span></label>
+                <label class="radio-option"><input type="radio" name="role" value="Executive or senior leader"><span class="radio-label"><strong>Executive or senior leader</strong><br><small>You carry a function or a P&amp;L inside someone else&rsquo;s company</small></span></label>
+                <label class="radio-option"><input type="radio" name="role" value="Independent professional or practice owner"><span class="radio-label"><strong>Independent professional or practice owner</strong><br><small>Your name is the business</small></span></label>
+                <label class="radio-option"><input type="radio" name="role" value="Competitive athlete or performer"><span class="radio-label"><strong>Competitive athlete or performer</strong><br><small>You are judged on the day, repeatedly</small></span></label>
+                <label class="radio-option"><input type="radio" name="role" value="Other high-pressure role"><span class="radio-label"><strong>Something else high-pressure</strong><br><small>You&rsquo;ll get a box to explain at the end</small></span></label>
+              </div>
+            </fieldset>
+
+            <!-- 2 -->
+            <fieldset class="match-step" data-step="2">
+              <legend class="question-title">How many people&rsquo;s livelihoods depend on your decisions?</legend>
+              <p class="question-subtitle">Blunt, but it is the best single proxy we have found for the weight someone is carrying.</p>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="scale" value="Just me"><span class="radio-label">Just me</span></label>
+                <label class="radio-option"><input type="radio" name="scale" value="2 to 10 people"><span class="radio-label">2 to 10</span></label>
+                <label class="radio-option"><input type="radio" name="scale" value="11 to 50 people"><span class="radio-label">11 to 50</span></label>
+                <label class="radio-option"><input type="radio" name="scale" value="51 to 250 people"><span class="radio-label">51 to 250</span></label>
+                <label class="radio-option"><input type="radio" name="scale" value="More than 250 people"><span class="radio-label">More than 250</span></label>
+              </div>
+            </fieldset>
+
+            <!-- 3 -->
+            <fieldset class="match-step" data-step="3">
+              <legend class="question-title">What&rsquo;s the heaviest thing right now?</legend>
+              <p class="question-subtitle">Pick the one that is actually true this month, not the one that sounds best.</p>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="heaviest" value="The weight of every decision landing on me"><span class="radio-label">The weight of every decision landing on me</span></label>
+                <label class="radio-option"><input type="radio" name="heaviest" value="Running on empty but unable to stop"><span class="radio-label">Running on empty, and unable to stop</span></label>
+                <label class="radio-option"><input type="radio" name="heaviest" value="No one I can be honest with"><span class="radio-label">There is no one I can actually be honest with</span></label>
+                <label class="radio-option"><input type="radio" name="heaviest" value="Hit the goals and it did not land"><span class="radio-label">I hit the goals and it didn&rsquo;t land the way I expected</span></label>
+                <label class="radio-option"><input type="radio" name="heaviest" value="Performing under pressure"><span class="radio-label">Holding my performance together under pressure</span></label>
+                <label class="radio-option"><input type="radio" name="heaviest" value="A transition I did not choose"><span class="radio-label">A transition I didn&rsquo;t choose &mdash; exit, role change, end of a season</span></label>
+              </div>
+            </fieldset>
+
+            <!-- 4 -->
+            <fieldset class="match-step" data-step="4">
+              <legend class="question-title">Right now, how much of that do you say out loud to anyone?</legend>
+              <p class="question-subtitle">There is no wrong answer here and it changes who we seat you with.</p>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="candor" value="None of it"><span class="radio-label"><strong>None of it.</strong> Everyone gets the version that&rsquo;s fine.</span></label>
+                <label class="radio-option"><input type="radio" name="candor" value="One person, sometimes"><span class="radio-label"><strong>One person, sometimes.</strong> And I edit it on the way out.</span></label>
+                <label class="radio-option"><input type="radio" name="candor" value="A couple of people, partially"><span class="radio-label"><strong>A couple of people, partially.</strong> Never the whole picture to anyone.</span></label>
+                <label class="radio-option"><input type="radio" name="candor" value="I talk about it openly"><span class="radio-label"><strong>I talk about it openly.</strong> I want better thinking, not an outlet.</span></label>
+              </div>
+            </fieldset>
+
+            <!-- 5 -->
+            <fieldset class="match-step" data-step="5">
+              <legend class="question-title">What do you want out of the room?</legend>
+              <p class="question-subtitle">Choose as many as apply. Rooms get built around shared intent.</p>
+              <div class="checkbox-group" data-target="wants_from_room">
+                <label class="checkbox-label"><input type="checkbox" value="People who understand the pressure without explanation"> People who understand the pressure without me explaining it</label>
+                <label class="checkbox-label"><input type="checkbox" value="Honest feedback from people with nothing to gain"> Honest feedback from people with nothing to gain</label>
+                <label class="checkbox-label"><input type="checkbox" value="Accountability that actually holds"> Accountability that actually holds</label>
+                <label class="checkbox-label"><input type="checkbox" value="A thinking partner for decisions"> A thinking partner for the decisions I can&rsquo;t discuss internally</label>
+                <label class="checkbox-label"><input type="checkbox" value="Tools to change a pattern I keep repeating"> Tools to change a pattern I keep repeating</label>
+                <label class="checkbox-label"><input type="checkbox" value="Somewhere to stop performing for ninety minutes"> Somewhere I can stop performing for ninety minutes</label>
+              </div>
+            </fieldset>
+
+            <!-- 6 -->
+            <fieldset class="match-step" data-step="6">
+              <legend class="question-title">Where do you do your best thinking?</legend>
+              <p class="question-subtitle">Mixing these badly is the fastest way to waste a good group.</p>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="register" value="Direct and challenging"><span class="radio-label"><strong>Direct and challenging.</strong> Push me. I&rsquo;ll push back.</span></label>
+                <label class="radio-option"><input type="radio" name="register" value="Steady and reflective"><span class="radio-label"><strong>Steady and reflective.</strong> I need room before I&rsquo;ll say the true thing.</span></label>
+                <label class="radio-option"><input type="radio" name="register" value="A mix, depending on the day"><span class="radio-label"><strong>A mix.</strong> Depends on the day and the topic.</span></label>
+              </div>
+            </fieldset>
+
+            <!-- 7 -->
+            <fieldset class="match-step" data-step="7">
+              <legend class="question-title">When could you genuinely hold ninety minutes?</legend>
+              <p class="question-subtitle">Pick every slot that would survive a busy week. A group you miss is worse than no group.</p>
+              <div class="checkbox-group" data-target="availability">
+                <label class="checkbox-label"><input type="checkbox" value="Weekday early morning"> Weekday early morning (before 8am CT)</label>
+                <label class="checkbox-label"><input type="checkbox" value="Weekday midday"> Weekday midday</label>
+                <label class="checkbox-label"><input type="checkbox" value="Weekday late afternoon"> Weekday late afternoon</label>
+                <label class="checkbox-label"><input type="checkbox" value="Weekday evening"> Weekday evening (after 6pm CT)</label>
+                <label class="checkbox-label"><input type="checkbox" value="Weekend morning"> Weekend morning</label>
+              </div>
+            </fieldset>
+
+            <!-- 8 -->
+            <fieldset class="match-step" data-step="8">
+              <legend class="question-title">Anyone we should keep you away from?</legend>
+              <p class="question-subtitle">Optional, and treated as confidential. Competitors, clients, board members, anyone from your own industry &mdash; tell us and we will seat around it.</p>
+              <div class="form-group">
+                <label for="avoid">Names, companies or categories to avoid</label>
+                <textarea id="avoid" name="avoid" class="form-control" rows="3" placeholder="e.g. no one from commercial real estate in Nashville; nobody who knows my board"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="context">Anything else that would help us seat you well</label>
+                <textarea id="context" name="context" class="form-control" rows="4" placeholder="What you'd want the room to understand about you on day one"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- 9 -->
+            <fieldset class="match-step" data-step="9">
+              <legend class="question-title">Where do we send your match?</legend>
+              <p class="question-subtitle">You&rsquo;ll hear back within two business days with the room we think fits and the next free session date. If nothing fits yet, we say that instead of seating you badly.</p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="m_fname">First name</label>
+                  <input type="text" id="m_fname" name="first_name" class="form-control" placeholder="First name" autocomplete="given-name" required>
+                </div>
+                <div class="form-group">
+                  <label for="m_lname">Last name</label>
+                  <input type="text" id="m_lname" name="last_name" class="form-control" placeholder="Last name" autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="m_email">Email</label>
+                  <input type="email" id="m_email" name="email" class="form-control" placeholder="you@company.com" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="m_phone">Phone <span style="font-weight:400;color:var(--gray-500)">(optional)</span></label>
+                  <input type="tel" id="m_phone" name="phone" class="form-control" placeholder="(555) 555-5555" autocomplete="tel">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="m_city">City and time zone</label>
+                <input type="text" id="m_city" name="city_timezone" class="form-control" placeholder="e.g. Nashville, TN — Central" autocomplete="address-level2">
+              </div>
+              <p style="font-size:0.85rem;color:var(--gray-500)">Your answers are used to seat you and nothing else. They are not shared with the group, and they are never sold.</p>
+            </fieldset>
+
+            <div class="match-nav">
+              <button type="button" class="btn btn-secondary" id="matchBack" style="visibility:hidden">Back</button>
+              <button type="button" class="btn btn-primary btn-lg" id="matchNext">Continue</button>
+              <button type="submit" class="btn btn-primary btn-lg" id="matchSubmit" style="display:none">Request My Free Session</button>
+            </div>
+          </div>
+
+          <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+
+          <div class="form-success">
+            <div class="success-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Got it &mdash; we&rsquo;re building your room.</h3>
+            <p>You&rsquo;ll hear back within two business days with the group we think fits and the date of your free session. If we don&rsquo;t have the right room open yet, we&rsquo;ll tell you that rather than seat you badly.</p>
+            <p style="margin-top:1rem">In the meantime, <a href="lonely-at-the-top">this is the fuller version of why so few high achievers have anyone to talk to</a>.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Straight answers</h2>
+        <div class="accordion" style="max-width:820px;margin:0 auto">
+          <div class="accordion-item">
+            <div class="accordion-header">Is the first session really free?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>Yes. A full ninety-minute session with your matched group, no card, no obligation. Groups only work when people want to be there, and you cannot know that from a sales page. If you want to keep your seat afterwards we&rsquo;ll talk about it then.</p></div></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Why is the questionnaire so long?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>Because the room is the product. A random group of strangers is a waiting room; a matched group of peers is the thing that actually works. Nine questions is what it takes to seat you next to people who will recognise your situation without a preamble.</p></div></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Who else is in the room?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>Five or six people carrying comparable weight &mdash; founders, executives, practice owners, competitive athletes. Not necessarily your industry. Often better if it isn&rsquo;t. What matters is that the pressure is recognisable.</p></div></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Is what I say confidential?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>Everything in the room stays in the room &mdash; that is the one rule the group agrees to before anyone speaks. Note that coaching is not a legally privileged relationship the way licensed therapy is; if that distinction matters for your situation, a therapist is the right choice and I will tell you so.</p></div></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Group or private &mdash; how do I know?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>If the loneliest part is that nobody around you understands the position, group is usually the faster fix. If there is one specific pattern you want dismantled, private sessions go deeper on it. Plenty of people do both. <a href="programs">How each one works</a>.</p></div></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Is this therapy?<span class="icon">+</span></div>
+            <div class="accordion-body"><div class="accordion-body-inner"><p>No. This is performance and mental wellness coaching for people who are functioning and want to function better. It is not treatment, not diagnosis, and not a substitute for clinical care. If you are in crisis, call or text <strong>988</strong> in the US.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section class="section section-green">
+      <div class="container text-center">
+        <h2 style="color:var(--white)">The room already exists. You just haven&rsquo;t been in it yet.</h2>
+        <p style="color:rgba(255,255,255,0.9);max-width:640px;margin:1rem auto 2rem">Four minutes of questions, a free ninety-minute session, and people who will recognise the sentence you have been not saying.</p>
+        <div class="cta-buttons">
+          <a href="#match" class="btn btn-white btn-lg">Find My Room</a>
+          <a href="contact" class="btn btn-outline-white btn-lg">Talk to Shawn First</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  (function(){
+    var form = document.getElementById('matchForm');
+    if(!form) return;
+    var steps = Array.prototype.slice.call(form.querySelectorAll('.match-step'));
+    var bar   = document.getElementById('matchBar');
+    var count = document.getElementById('matchCount');
+    var back  = document.getElementById('matchBack');
+    var next  = document.getElementById('matchNext');
+    var submit= document.getElementById('matchSubmit');
+    var i = 0;
+
+    // A multi-step form with no submit button on step 1 will POST a blank record
+    // the moment someone presses Enter. Block implicit submission everywhere
+    // except the final step.
+    form.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && i < steps.length - 1){
+        e.preventDefault();
+        next.click();
+      }
+    });
+
+    function render(){
+      steps.forEach(function(s,n){ s.classList.toggle('is-active', n === i); });
+      bar.style.width = Math.round(((i+1)/steps.length)*100) + '%';
+      count.textContent = 'Question ' + (i+1) + ' of ' + steps.length;
+      back.style.visibility = i === 0 ? 'hidden' : 'visible';
+      next.style.display   = i === steps.length-1 ? 'none' : '';
+      submit.style.display = i === steps.length-1 ? '' : 'none';
+      var f = steps[i].querySelector('input,textarea,select');
+      if(f && f.type !== 'radio' && f.type !== 'checkbox') { try{ f.focus({preventScroll:true}); }catch(e){} }
+    }
+
+    function err(msg){
+      var p = steps[i].querySelector('.match-error');
+      if(!p){ p = document.createElement('p'); p.className='match-error'; p.setAttribute('role','alert'); steps[i].appendChild(p); }
+      p.textContent = msg;
+    }
+    function clearErr(){ var p = steps[i].querySelector('.match-error'); if(p) p.remove(); }
+
+    function valid(){
+      var radios = steps[i].querySelectorAll('input[type=radio]');
+      if(radios.length && !steps[i].querySelector('input[type=radio]:checked')){
+        err('Pick the one that fits best so we can seat you properly.'); return false;
+      }
+      var boxes = steps[i].querySelectorAll('input[type=checkbox]');
+      if(boxes.length && !steps[i].querySelector('input[type=checkbox]:checked')){
+        err('Choose at least one — this one shapes the room.'); return false;
+      }
+      clearErr(); return true;
+    }
+
+    next.addEventListener('click', function(){
+      if(!valid()) return;
+      if(i < steps.length-1){ i++; render();
+        form.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+    back.addEventListener('click', function(){
+      if(i > 0){ i--; render(); form.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+
+    // Selected states
+    form.addEventListener('change', function(e){
+      var t = e.target;
+      if(t.type === 'radio'){
+        var g = t.closest('.radio-group');
+        if(g) g.querySelectorAll('.radio-option').forEach(function(o){
+          o.classList.toggle('selected', !!o.querySelector('input:checked')); });
+        clearErr();
+      }
+      if(t.type === 'checkbox'){
+        var lbl = t.closest('.checkbox-label');
+        if(lbl) lbl.classList.toggle('selected', t.checked);
+        clearErr();
+      }
+      // form-notify's raw_data keeps STRINGS only, and Object.fromEntries drops all
+      // but the last value of a repeated name — so multi-selects are serialised into
+      // a single hidden field.
+      form.querySelectorAll('.checkbox-group[data-target]').forEach(function(g){
+        var target = document.getElementById(g.getAttribute('data-target'));
+        if(!target) return;
+        target.value = Array.prototype.slice.call(g.querySelectorAll('input:checked'))
+                        .map(function(c){ return c.value; }).join('; ');
+      });
+    });
+
+    render();
+  })();
+  </script>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/Mental Mechanics Logo Horizontal-1920w.png" alt="The Mental Mechanics" loading="lazy" width="200" height="50">
+          <p>Mental wellness coaching for people whose results matter. Private and group sessions for high-achieving entrepreneurs, athletes, and leaders.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/groups/227824444972533" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shawnhuber3" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.tiktok.com/@thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@thementalmechanic" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Pages</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="speaking.html">Speaking</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h5>Coaching</h5>
+          <div class="footer-links">
+            <a href="business-owner.html">For Entrepreneurs</a>
+            <a href="equestrian.html">For Equestrians</a>
+            <a href="baseball.html">For Baseball Players</a>
+            <a href="soccer.html">For Soccer Players</a>
+            <a href="teen-girls-sports.html">Teen Girls in Sports</a>
+            <a href="hypnotherapy.html">Hypnotherapy</a>
+            <a href="how-we-work.html">How We Work</a>
+            <a href="products.html">Recommended Products</a>
+          </div>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <div class="footer-links">
+            <a href="tel:9198243530"><i class="fas fa-phone" style="margin-right:6px"></i> (919) 824-3530</a>
+            <a href="mailto:structuredfreedom@gmail.com"><i class="fas fa-envelope" style="margin-right:6px"></i> Email Us</a>
+            <a href="contact.html"><i class="fas fa-calendar" style="margin-right:6px"></i> Schedule a Call</a>
+          </div>
+          <p style="font-size:0.85rem;margin-top:1rem;color:var(--gray-500)">Franklin, TN 37069<br>Mon - Fri, 9am - 5pm CT</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Mental Mechanics. All Rights Reserved.</span>
+        <span>Mind, Body, and Business</span>
+        <span style="font-size:11px;color:#999;">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" style="color:#999;">Privacy</a> &middot; <a href="https://policies.google.com/terms" style="color:#999;">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+</body>
+</html>
