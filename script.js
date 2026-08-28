@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (accepted) {
           challengeForm.querySelector('.form-fields').style.display = 'none';
           challengeForm.querySelector('.form-success').classList.add('show');
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'form_submission', form_type: 'challenge', form_id: 'challenge' });
           window.open('ebooks/5-Day Mental Wellness Reset.pdf', '_blank');
         } else {
           btn.disabled = false;
@@ -206,6 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Only claim success if the server actually took it. Showing a thank-you
       // regardless is how a total form outage stays invisible for months.
       if (accepted) {
+        // Tell GTM the lead was actually accepted by the server. This is the
+        // ONLY signal GA4 gets for a form submit — the forms are AJAX, there is
+        // no thank-you page, so a pageview-based conversion can never fire.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_submission',
+          form_type: form.querySelector('[name="form_type"]')?.value || 'contact',
+          form_id: form.id || form.getAttribute('data-form') || ''
+        });
+
         const fields = form.querySelector('.form-fields');
         const success = form.querySelector('.form-success');
         if (fields) fields.style.display = 'none';
