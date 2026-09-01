@@ -176,11 +176,8 @@ p { margin-bottom: 1rem; color: var(--gray-700); }
   background: var(--charcoal);
   color: var(--white);
   font-size: 0.8rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
+  position: relative;
+  z-index: 1;
   height: 36px;
   display: flex;
   align-items: center;
@@ -233,10 +230,8 @@ p { margin-bottom: 1rem; color: var(--gray-700); }
 
 /* Main nav */
 .nav {
-  position: fixed;
-  top: 36px;
-  left: 0;
-  right: 0;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(12px);
@@ -393,9 +388,8 @@ p { margin-bottom: 1rem; color: var(--gray-700); }
 }
 .nav-cta:hover { background: var(--green-dark); }
 
-/* Body offset for fixed nav (utility 36 + nav 76 = 112) */
-body { padding-top: 0; }
-.hero, .hero-split-home, .page-hero { padding-top: 112px; }
+/* Utility bar scrolls away; .nav is sticky and occupies normal flow,
+   so no padding compensation is needed anywhere. */
 .mobile-toggle {
   display: none;
   flex-direction: column;
@@ -412,8 +406,6 @@ body { padding-top: 0; }
 }
 @media (max-width: 1024px) {
   .nav-utility { display: none; }
-  .nav { top: 0; }
-  .hero, .hero-split-home, .page-hero { padding-top: 76px; }
   .nav {
     background: var(--white);
     backdrop-filter: none;
@@ -475,7 +467,6 @@ body { padding-top: 0; }
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   background: var(--charcoal);
-  padding-top: 112px;
 }
 .hero-split-left {
   display: flex;
@@ -552,7 +543,6 @@ body { padding-top: 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 112px;
 }
 .hero-bg {
   position: absolute;
@@ -584,7 +574,6 @@ body { padding-top: 0; }
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 4rem;
-  padding-top: 112px;
 }
 .hero-split-img {
   height: 100%;
@@ -594,15 +583,13 @@ body { padding-top: 0; }
   border-radius: 0;
 }
 @media (max-width: 768px) {
-  .hero-split { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; }
+  .hero-split { grid-template-columns: 1fr; min-height: auto; }
   .hero-split-img { min-height: 300px; border-radius: var(--radius-md); }
 }
 
 /* ===== PAGE HERO (smaller) ===== */
-/* Top padding clears the fixed header (utility 36 + nav 76 = 112px) and adds
-   ~64px breathing room to match the 4rem bottom padding for balanced spacing. */
 .page-hero {
-  padding: 11rem 0 4rem;
+  padding: 4.5rem 0 4rem;
   background: linear-gradient(135deg, var(--charcoal) 0%, var(--gray-900) 100%);
   text-align: center;
 }
@@ -610,8 +597,7 @@ body { padding-top: 0; }
 .page-hero p { color: var(--gray-300); font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
 .page-hero .section-label { color: var(--gold); }
 @media (max-width: 1024px) {
-  /* Mobile: no utility bar, nav is 76px — keep top/bottom breathing room even */
-  .page-hero { padding: 9rem 0 4rem; }
+  .page-hero { padding: 3.5rem 0 3.5rem; }
 }
 
 /* ===== CARDS ===== */
